@@ -18,6 +18,9 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: Run tests and collect coverage
+          command: pytest --cov api/
       - codecov/upload
 
 # Invoke jobs via workflows
