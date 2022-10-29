@@ -21,7 +21,7 @@ jobs:
           command: "echo Hello, World!"
       - run:
           name: Run tests and collect coverage
-          command: pytest backend/api/
+          command: python -m pytest
       - codecov/upload
 
 # Invoke jobs via workflows
