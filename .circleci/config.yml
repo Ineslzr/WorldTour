@@ -18,6 +18,7 @@ jobs:
       - run:
           name: Install requirements
           command: pip install -r backend/api/requirements.txt
+      #lance les test et collecte la couverture
       - run:
           name: Run tests and collect coverage
           command: pytest --cov backend/api/
