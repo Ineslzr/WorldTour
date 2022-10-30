@@ -20,7 +20,7 @@ jobs:
           command: pip install -r backend/api/requirements.txt
       - run:
           name: Run tests and collect coverage
-          command: pytest backend/api/
+          command: pytest --cov backend/api/
       - codecov/upload
 
 
