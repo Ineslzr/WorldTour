@@ -61,7 +61,7 @@ cd web
 npm start
 ```
 
-Si tout se passe bien, le navigateur va s'ouvrir de lui même.
+Si tout se passe bien, le navigateur devrait s'ouvrir de lui-même.
 
 **Et voilà ! L'application devrait être lancée.**
 
