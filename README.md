@@ -11,7 +11,7 @@ MAMP, Wamp ou XAMPP
 Récupérez le code source de l'application en utilisant la commande **git clone** ci-dessous ou en téléchargeant le zip.
 
 ```cmd
-git clone git@github.com:Ineslzr/testProjet.git
+git clone git@github.com:Ineslzr/WorldTour.git
 ```
 
 Si vous ne parvenez pas à cloner le projet, vérifiez que vous avez bien généré votre clef ssh.
