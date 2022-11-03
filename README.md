@@ -2,7 +2,7 @@
 [![CircleCI](https://img.shields.io/circleci/build/gh/Ineslzr/WorldTour/main?logo=CircleCi&style=flat-square)](https://app.circleci.com/pipelines/github/Ineslzr/WorldTour) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=Ineslzr_WorldTour&metric=alert_status)](https://sonarcloud.io/dashboard?id=Ineslzr_WorldTour) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Ineslzr_WorldTour&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Ineslzr_WorldTour) [![codecov](https://codecov.io/gh/Ineslzr/WorldTour/branch/main/graph/badge.svg?token=ERJAI8ON50)](https://codecov.io/gh/Ineslzr/WorldTour)
 
 ## Prérequis
-Pyhton - 
+Python - 
 NodeJS -
 pip -
 MAMP, Wamp ou XAMPP
