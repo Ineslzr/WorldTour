@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
-import Quiz from './components/quiz';
+import Quiz from './components/Quiz.js';
 
 function App(){
 	return(
