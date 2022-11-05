@@ -1,0 +1,9 @@
+body {
+  margin: 270px auto;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu',  'Helvetica Neue';  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c7eeff;
+}
+
