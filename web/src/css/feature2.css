@@ -1,12 +1,10 @@
 .app {
-    background-color: #4f6ace;
-    width: 450px;
-    min-height: 200px;
-    height: min-content;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 10px 10px 42px 0px rgba(65, 83, 173, 0.75);
-    display:block;
-    justify-content: space-evenly;
-    color:aliceblue
-  }
+  display: flex;
+  justify-content: space-evenly;
+  width: 450px;
+  min-height: 200px;
+  border-radius: 7px;
+  background-color: #B1E9A3;
+  border: 2px solid #7ac38f;
+  padding: 20px;
+}

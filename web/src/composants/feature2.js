@@ -6,13 +6,15 @@ import LecteurPdf from './lecteurPdf';
 
 function Feature2(props){
     const [showLecteur, setShowLecteur] = useState(true);
-    
+
     const handleClickButton=()=>{
-      setShowLecteur(false); 
+    if(showLecteur===true){setShowLecteur(false); }
+    else setShowLecteur(true);
+      
     }
 	return(
     <div className='app'>
-        {showLecteur ? ( <Proposition handleClickButton={handleClickButton}/>):(<LecteurPdf/>)}
+        {showLecteur ? ( <Proposition handleClickButton={handleClickButton}/>):(<LecteurPdf  handleClickButton={handleClickButton}/>)}
     </div>
 	)
   
