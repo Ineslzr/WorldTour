@@ -39,7 +39,7 @@ Activez l'environnement
 Lancez le back
 
 ```cmd
-cd backend
+cd ..
 python run.py
 ```
 
