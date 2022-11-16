@@ -6,7 +6,7 @@ import LecteurPdf from './lecteurPdf';
 
 function Feature2(props){
     const [showLecteur, setShowLecteur] = useState(true);
-
+    console.log("SHOWLECTEUR:"+ showLecteur);
     const handleClickButton=()=>{
     if(showLecteur===true){setShowLecteur(false); }
     else setShowLecteur(true);
