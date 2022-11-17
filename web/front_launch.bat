@@ -1,2 +1,2 @@
 @echo off
-cd web && start cmd.exe /k "npm start"
+cd web && start /b cmd.exe /k "npm start"
