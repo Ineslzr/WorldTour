@@ -15,7 +15,14 @@
     font-weight: bold;
 }
 .button-valide{
-  background-color:  #C37857
+  background-color:  #C37857;
+}
+
+.button-valide button{
+  background-color:  none;
+}
 
 
+.form-validation {
+  margin-top: 10px;
 }

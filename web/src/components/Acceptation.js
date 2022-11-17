@@ -16,8 +16,8 @@ function Acceptation(props){
     }
    
     return(
-        <div className='button-valide'>
-				<button onClick={props.handleFormMail}> Voulez-vous recevoir votre résultat par mail ?</button>
+        <div  className='button-valide'>
+				<button style={{backgroundColor:"#C37857", border:"#C37857 1px solid"}} onClick={props.handleFormMail}> Voulez-vous recevoir votre résultat par mail ?</button>
 		</div>
     )
 }

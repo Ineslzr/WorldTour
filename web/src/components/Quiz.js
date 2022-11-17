@@ -57,11 +57,13 @@ function Quiz(props){
 	 
 
     return(
+		<div>
+
         <div className='app'>
 			{showScore ? (
 				<><Score score={score} nbQuestions={questions.length} />
-				{showForm ?(<ShowFormulaire/>):(
-					<Acceptation handleFormMail={handleFormMail} />) }</>
+				
+			</>
 			) : (
 				<>
 					<Question 
@@ -81,7 +83,21 @@ function Quiz(props){
 				</>
 			)}
 		</div>
-    )
-}
+
+
+		
+		{showScore ? (<div className='form-validation'>
+				{showForm ?(<ShowFormulaire/>):(
+					<Acceptation handleFormMail={handleFormMail} />) }
+				</div>
+		) : 
+		
+		(<></>)}
+
+	</div>
+
+
+				
+)}
 
 export default Quiz;
