@@ -3,7 +3,9 @@ import '../styles/quiz/quiz.css';
 import Score from "./score";
 import Question from "./question.js";
 import ChoixQuestion from "./choixQuestion";
-import Mail from "./Mail.js";
+import Mail from "./ShowFormulaire.js";
+import Acceptation from "./Acceptation.js";
+import ShowFormulaire from './ShowFormulaire.js';
 
 
 function Quiz(props){
@@ -12,8 +14,8 @@ function Quiz(props){
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [showForm,setShowForm]= useState(false);
 
-	const [mail, setShowEnvoieMail] = useState(false);
 
 	const handleAnswerOptionClick = (event, isCorrect) => {
 		if (isCorrect) {
@@ -28,9 +30,20 @@ function Quiz(props){
 		}
 	};
 
-	const handleFormMail = (event) => {
-		alert('alert');
+	const handleFormMail = () => {
+		if(showForm === false){
+			setShowForm(true);
+		}
+		else setShowForm(false);
+
 	}
+
+	// const handleFormMail = () => {
+	// 	if(mailValide === true){
+	// 		setShowEnvoieMail(true);
+	// 	}
+
+	// }
 
 	useEffect(() => {
 		fetch("/Quiz").then(
@@ -44,10 +57,11 @@ function Quiz(props){
 	 
 
     return(
-		<div>
         <div className='app'>
 			{showScore ? (
-				<Score score={score} nbQuestions={questions.length} />
+				<><Score score={score} nbQuestions={questions.length} />
+				{showForm ?(<ShowFormulaire/>):(
+					<Acceptation handleFormMail={handleFormMail} />) }</>
 			) : (
 				<>
 					<Question 
@@ -67,19 +81,6 @@ function Quiz(props){
 				</>
 			)}
 		</div>
-		{showScore ? 
-		(
-		
-		<div className='button-valide'>
-				<button onClick={() => handleFormMail()}> Voulez-vous recevoir votre résultat par mail ?</button>
-			
-		
-		</div>) 
-		
-		: (<></>) }
-		
-	</div>
-		
     )
 }
 

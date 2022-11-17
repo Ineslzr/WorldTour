@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../styles/quiz/quiz.css';
 
-function Mail(){
-    
+function ShowFormulaire(prop){
     const validerMail = () => {
 
     }
@@ -10,8 +9,8 @@ function Mail(){
         <div className='mail'>
 		    <div className='titre'> Veuillez saisir votre mail</div>
             <input type={'text'}/>
-            <button onClick={() => validerMail()}>Valider</button>	
+            <button onClick={ validerMail()}>Valider</button>	
 		</div>
     )
 }
-export default Mail;
+export default ShowFormulaire;
