@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../styles/quiz/quiz.css';
+import '../styles/mail/envoieMail.css';
 
 function ShowFormulaire(prop){
     const validerMail = () => {
@@ -7,9 +7,12 @@ function ShowFormulaire(prop){
     }
     return(
         <div className='mail'>
-		    <div className='titre'> Veuillez saisir votre mail</div>
-            <input type={'text'}/>
-            <button onClick={ validerMail()}>Valider</button>	
+		    <div><div className='titre'> Veuillez saisir votre mail</div>
+                <div className='champ-text' style={{marginTop: "10px"}}>
+                <input type={'text'}/>
+                </div>
+            </div>
+            <button style={{marginTop : "10px", marginRight: "50px", width: "20%"}} onClick={ validerMail()}>Valider</button>	
 		</div>
     )
 }
