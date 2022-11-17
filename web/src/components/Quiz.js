@@ -3,6 +3,8 @@ import '../styles/quiz/quiz.css';
 import Score from "./score";
 import Question from "./question.js";
 import ChoixQuestion from "./choixQuestion";
+import Mail from "./Mail.js";
+
 
 function Quiz(props){
 
@@ -10,6 +12,8 @@ function Quiz(props){
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+
+	const [mail, setShowEnvoieMail] = useState(false);
 
 	const handleAnswerOptionClick = (event, isCorrect) => {
 		if (isCorrect) {
@@ -24,6 +28,10 @@ function Quiz(props){
 		}
 	};
 
+	const handleFormMail = (event) => {
+		alert('alert');
+	}
+
 	useEffect(() => {
 		fetch("/Quiz").then(
 			res => res.json()
@@ -33,8 +41,10 @@ function Quiz(props){
 			}
 		)
 	}, []);
+	 
 
     return(
+		<div>
         <div className='app'>
 			{showScore ? (
 				<Score score={score} nbQuestions={questions.length} />
@@ -57,6 +67,19 @@ function Quiz(props){
 				</>
 			)}
 		</div>
+		{showScore ? 
+		(
+		
+		<div className='button-valide'>
+				<button onClick={() => handleFormMail()}> Voulez-vous recevoir votre résultat par mail ?</button>
+			
+		
+		</div>) 
+		
+		: (<></>) }
+		
+	</div>
+		
     )
 }
 
