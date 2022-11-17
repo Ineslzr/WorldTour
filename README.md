@@ -52,7 +52,7 @@ Vous devriez voir :
 
 ## Lancement du frontend
 
-Ouvrez un second terminale et tapez ces 2 commandes :
+Ouvrez un second terminal et tapez ces 2 commandes :
 
 ```cmd
 cd web

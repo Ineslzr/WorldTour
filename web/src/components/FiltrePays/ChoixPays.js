@@ -78,7 +78,7 @@ function ChoixPays(){
                 </div>
                                 
                 <div style={rightSideCountries}>
-                    {countries.filter(e => e.includes(typeFilter.toUpperCase()) || e.includes(typeFilter.toLowerCase()) || typeFilter === '')
+                    {countries.filter(e => e.startsWith(typeFilter.toUpperCase()) || e.startsWith(typeFilter.toLowerCase()) || typeFilter === '')
                         .map(e => 
                     <CaseClickable intitule={e} />
                     )}
