@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/quiz/choix.css';
+import '../../styles/quiz/choix.css';
 
 function Choix(props){
     return(

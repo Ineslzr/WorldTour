@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../styles/quiz/quiz.css';
+import '../../styles/quiz/quiz.css';
 
 function Score(props){
     return(
