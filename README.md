@@ -66,9 +66,7 @@ Si tout se passe bien, le navigateur devrait s'ouvrir de lui-même.
 
 Dans le dossier source "WorldTour", ouvrez un terminal et tapez cette commande :
 
-```./back_launch.bat
-
-```
+``` ./back_launch.bat```
 
 Si tout se passe bien, le navigateur devrait s'ouvrir tout seul.
 
