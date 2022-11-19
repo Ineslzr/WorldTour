@@ -5,6 +5,7 @@ function LecteurPdf(props){
 
     const [filetoupload, setFiletoupload] = useState();
     const [points, setPoints] = useState(false);
+    const [choix,setChoix] = useState(false);
 
     const handleFileChange = async (e) =>{
         const file = e.target.files[0];
@@ -20,7 +21,8 @@ function LecteurPdf(props){
         if (filetoupload != null) {
             const data = new FormData();
             data.append('file_from_react', filetoupload);
-
+            console.log(props.optionValue);
+            data.append('option_from_react',props.optionValue)
             let response = await fetch('/readPdf',
             {
                 method: 'post',
@@ -29,7 +31,12 @@ function LecteurPdf(props){
             );
             let res = await response.json();
             setPoints(res);
-            console.log("RES:"+res);
+            console.log(points);
+            if(Number.isInteger(res)){
+                setChoix(true);
+                console.log(choix);
+            }
+            else setChoix(false);
         }
             
     }
@@ -49,9 +56,12 @@ function LecteurPdf(props){
                 <button onClick={handleClickButton}>envoyer</button>
                 <button onClick={props.handleClickButton}>retour</button>
                 </>
-            :
-            <div>Bravo, vous avez gagné {points} points ! </div>
+            :choix == 0 ?
+            <><div>OHH le tricheur </div></>
+                 : 
+                 <div>Bravo, vous avez gagné {points} points ! </div>
             }
+           
             
         </div>
     )

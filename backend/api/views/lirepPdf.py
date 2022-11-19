@@ -1,29 +1,26 @@
+import PyPDF2
 from api import app, mysql
 from api.models import *
-from flask import jsonify,request
-from PyPDF2 import PdfFileReader
-from PyPDF2 import PdfFileWriter
-import base64
-
-@app.route("/openPdf")
-def ouvrePdf():
-       document = PdfFileReader(open(myFile,'rb'))
-       metadata = document.getDocumentInfo()
-       print(metadata)
+from flask import jsonify, request
 
 @app.route("/readPdf", methods=["POST"],strict_slashes=False)
 def test_pdf():
+    type=request.form['option_from_react']
     file= request.files['file_from_react']
-    filename = file.filename
-    
-    if ("billet" and "avion") in filename :
-        return jsonify(30)
-    elif ("ticket" and "exposition") in filename :
-        return jsonify(20)
-    else :
-        return jsonify("billet normal")
-
-
+    reader=PyPDF2.PdfFileReader(file)
+    page1=reader.getPage(0)
+    pageExtracted=page1.extractText()
+    key1='réservation'
+    key2='Exposition'
+    if(type=='Avion'):
+        if((type in pageExtracted)or(key1 in pageExtracted)):
+             return jsonify(10)
+        else: return jsonify("erreur1")
+    elif(type=='Exposition'):
+        if((type in pageExtracted)or(key2 in pageExtracted)):
+             return jsonify(3)
+        else: return jsonify("erreur2")
+    else: return jsonify("erreur")
 
 
 @app.route('/')
