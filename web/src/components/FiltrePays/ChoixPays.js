@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import '../../styles/quiz/quiz.css';
-import CaseNClickable from '../CaseNClickable'
-import CaseClickable from '../CaseClickable'
+import CaseNClickable from '../Cases/CaseNClickable'
+import CaseClickable from '../Cases/CaseClickable'
 
 
 function ChoixPays(){

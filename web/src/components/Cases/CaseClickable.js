@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/components/caseC.css"
+import "../../styles/components/caseC.css"
 
 // Case cliquable / bouton
 //Boutons pour aller d'une page à une autre
