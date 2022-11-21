@@ -5,12 +5,10 @@ import "../../styles/components/caseC.css"
 //Boutons pour aller d'une page à une autre
 function CaseClickable(props){
 
-    function clickable() {
-        console.log("passed");
-    }
+
 
     return(
-        <button className='btn' onClick={clickable()} >{props.intitule}</button>
+        <button className='btn'>{props.intitule}</button>
     )
 }
 
