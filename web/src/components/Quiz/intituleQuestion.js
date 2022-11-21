@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/quiz/intituleQuestion.css';
+import '../../styles/quiz/intituleQuestion.css';
 
 function IntituleQuestion(props){
     return(

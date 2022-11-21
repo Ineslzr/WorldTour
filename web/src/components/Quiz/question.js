@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/quiz/question.css';
+import '../../styles/quiz/question.css';
 import IntituleQuestion from './intituleQuestion';
 import CompteurQuestion from './compteurQuestion';
 

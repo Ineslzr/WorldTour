@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/quiz/choixQuestion.css';
+import '../../styles/quiz/choixQuestion.css';
 import Choix from "./Choix";
 
 

@@ -52,7 +52,7 @@ Vous devriez voir :
 
 ## Lancement du frontend
 
-Ouvrez un second terminale et tapez ces 2 commandes :
+Ouvrez un second terminal et tapez ces 2 commandes :
 
 ```cmd
 cd web
@@ -60,6 +60,16 @@ npm start
 ```
 
 Si tout se passe bien, le navigateur devrait s'ouvrir de lui-même.
+
+
+## Lancement automatique du backend et du frontend
+
+Dans le dossier source "WorldTour", ouvrez un terminal et tapez cette commande :
+
+``` ./back_launch.bat```
+
+Si tout se passe bien, le navigateur devrait s'ouvrir tout seul.
+
 
 **Et voilà ! L'application devrait être lancée.**
 

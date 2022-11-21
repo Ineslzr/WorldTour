@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/quiz/compteurQuestion.css';
+import '../../styles/quiz/compteurQuestion.css';
 
 function CompteurQuestion(props){
     return(
