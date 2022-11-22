@@ -1,17 +1,21 @@
-import smtplib
+import smtplib, ssl
 import getpass
+from email.message import EmailMessage
 
-email = input("Email:")
-pwd = getpass.getpass("Password: ")
-addr = input("Send to: ")
-msg = input("Message: ")
+email = 'haphuong141198@gmail.com'
+email_password = 'kmvnapjdiknrvdih'
+msg = EmailMessage()
+msg['subject'] = 'Resultat de votre test'
+msg['from'] = 'haphuong141198@gmail.com'
+msg['to'] = 'haphuong141198@gmail.com'
+msg.set_content('votre résultat est')
 
-client = smtplib.SMTP("smtp.gmail.com", 587)
-client.starttls()
-client.login
 
-client.sendmail(email, addr, msg)
-print("sucess")
+with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.ehlo()
 
-client.quit()
-input()
+    smtp.login(email, email_password)
+    
+    smtp.send_message(msg)
