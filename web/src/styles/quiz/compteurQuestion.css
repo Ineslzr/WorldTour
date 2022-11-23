@@ -1,0 +1,8 @@
+.question-count {
+    margin-bottom: 20px;
+}
+
+.question-count span {
+    font-weight: bold;
+    font-size: 28px;
+}
