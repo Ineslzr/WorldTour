@@ -18,6 +18,7 @@ function Feature2(){
     const handleOptionChangetoParent=(optionValue)=>{
         setoptionValue(optionValue);
         console.log(optionValue);
+        alert("Vos modifications ont été prise en compte");
     }
 
 	return(

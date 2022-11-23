@@ -4,11 +4,12 @@ function Proposition(props){
 
     const[option, setOption]=useState('');
 
+
     function handleOptionChange(event) {
         setOption(event.target.value);
     }
+
             
-    
     return (
         <div className='proposition-section'>
         <label for="doc-select"><center>Choisissez le document que vous allez déposer</center></label><br></br><br></br>
@@ -27,7 +28,7 @@ function Proposition(props){
             <option value="Exposition">Ticket d'expositions</option>
         </select> <br></br><br></br>
             <div className="buttonProp">
-                <center><button onClick={()=>props.handleChange(option)}> valider le type de document</button><br></br><br></br>
+                <center><button onClick={()=>{props.handleChange(option);}}> valider le type de document</button><br></br><br></br>
                 <button onClick={props.handleClickButton}> suivant</button></center>
             </div>
         </div>
