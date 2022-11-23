@@ -17,17 +17,19 @@ function Proposition(props){
             Vous pouvez par exemple nous transmettre 
             un pdf avec votre billet d'avion ou encore un ticket d'exposition
             </span><br></br><br></br>
-            <span>pour les billets d'avions = 30 points</span><br></br>
-            <span>pour les tickets d'expositions = 20 points</span><br></br><br></br>
+            <span> les billets d'avions = 10 points</span><br></br>
+            <span> les tickets d'expositions =3 points</span><br></br><br></br>
         <select name="typeDoc" id="docselect"  onChange={handleOptionChange}>
             <option value="">
              --type de doc   
             </option>
             <option value="Avion">Billet d'avion</option>
             <option value="Exposition">Ticket d'expositions</option>
-        </select> 
-        <button onClick={()=>props.handleChange(option)}> valider</button>
-        <button onClick={props.handleClickButton}> go</button>
+        </select> <br></br><br></br>
+            <div className="buttonProp">
+                <center><button onClick={()=>props.handleChange(option)}> valider le type de document</button><br></br><br></br>
+                <button onClick={props.handleClickButton}> suivant</button></center>
+            </div>
         </div>
        
     )

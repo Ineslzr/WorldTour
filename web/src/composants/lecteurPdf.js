@@ -53,8 +53,9 @@ function LecteurPdf(props){
                     />
                     <input type="hidden" id="datas"/> 
                 </form>
-                <button onClick={handleClickButton}>envoyer</button>
-                <button onClick={props.handleClickButton}>retour</button>
+                <center>
+                <br></br><button onClick={handleClickButton}>Envoyer pour verification</button><br></br><br></br>
+                <button onClick={props.handleClickButton}>retour</button></center>
                 </>
             :choix == 0 ?
             <><div>OHH le tricheur </div></>
