@@ -1,7 +1,7 @@
 from api import app,mysql
 
 class User():
-    def __init__():
+    def __init__(self):
         return 
 
     @staticmethod

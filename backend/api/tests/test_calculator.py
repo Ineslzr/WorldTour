@@ -1,4 +1,5 @@
 from api.models.Calculator import Calculator
+import pytest
 
 def test_add():
     assert Calculator.add(1, 2) == 3.0
