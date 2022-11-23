@@ -1,0 +1,10 @@
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  width: 450px;
+  min-height: 200px;
+  border-radius: 7px;
+  background-color: #B1E9A3;
+  border: 2px solid #7ac38f;
+  padding: 20px;
+}
