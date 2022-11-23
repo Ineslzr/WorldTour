@@ -1,6 +1,6 @@
 import Proposition from './proposition'
 import React, {useState} from 'react';
-import '../css/feature2.css'; 
+import '../../css/featurePDF/feature2.css'; 
 import LecteurPdf from './lecteurPdf';
 
 

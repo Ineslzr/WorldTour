@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/proposition.css'; 
+import '../../css/featurePDF/proposition.css'; 
 function Proposition(props){
 
     const[option, setOption]=useState('');

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../css/lecteurPdf.css'; 
+import '../../css/featurePDF/lecteurPdf.css'; 
 
 function LecteurPdf(props){
 
