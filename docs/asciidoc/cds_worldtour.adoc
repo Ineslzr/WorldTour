@@ -151,14 +151,6 @@ image::img/maq4_2.png[Logo Oxiane]
 
 <<<
 
-*(Petite) Feature 5 : Gestion de compte (inscription/connexion/déconnexion)*
-
-image::img/maq5_1.jpg[Logo Oxiane]
-
-image::img/maq5_2.jpg[Logo Oxiane]
-
-<<<
-
 * [.underline]#*Diagramme de classes global (partie métier)*#
 
 image::diagrams/diag-class-1.png[Logo Oxiane]
