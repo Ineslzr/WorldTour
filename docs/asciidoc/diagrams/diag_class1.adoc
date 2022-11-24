@@ -1,0 +1,45 @@
+[plantuml, target=diag-class-1, format=png]
+....
+class User {
+-idUser : int
+-name:String
++getName():String
++getQuiz():Quiz
++repondre():void
++afficherResultat():void
+}
+
+class Interface{
+-reponse:Choix
++getQuizJSON():Quiz
++getResultat():Reponse
++bonneReponse():boolean
+}
+
+class API{
++creerQuizJSON():QJSON
+}
+
+
+class Quiz{
+-questions:Question[]
+-choixQuiz:Choix
++formerQuiz():Quiz
++getQuestions():Question[]
+}
+
+class Question{
+-idQuestion:int
++getQuestions(idQuiz:int):Question[]
+}
+
+class Choix{
++getChoix(idQuiz:int):Choix
+}
+
+User "1" -- "1" Interface
+Interface "1" -- "1" API
+API "1" -- "1..*" Quiz
+Quiz "1" -- "5" Question
+Quiz "1" -- "*" Choix
+....
