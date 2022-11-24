@@ -1,0 +1,13 @@
+[plantuml, target=diag-seq-2, format=png]
+....
+User -> Interface : getTypeDocument(choix)
+Interface -> API: Post /proposition/choix
+API -> PropositionTypeDocument : getTypeDocument(choix)
+User -> Interface : getFichierPdf(billetAvion.pdf)
+Interface -> API: Post /lecteurPdf/pdf
+API -> LecteurPDF : getFichierPdf(billetAvion.pdf)
+API -> LecteurPDF : getScore(Choix,billetAvion.pdf)
+API <-- LecteurPDF : scoreJson
+Interface <-- API : scoreJson
+User <-- Interface : AfficheScore
+....

@@ -1,0 +1,14 @@
+extends: default
+role:
+  red: 
+    font-color: #c5000c
+  maroon:
+    font-color: #4f2400
+  green:
+    font-color: #21b510
+  navy:
+    font-color: #4974a5
+  soustitles:
+    font-size: 16
+base:
+  font-color: #000000
