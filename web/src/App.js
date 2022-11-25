@@ -6,8 +6,8 @@ import Mail from './components/ShowFormulaire.js';
 function App(){
 	return(
         <div className='application'>
-		
 			<Quiz/>
+			
 		</div>
 	)  
 }

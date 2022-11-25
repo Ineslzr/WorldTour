@@ -14,3 +14,4 @@ mysql = MySQL(app)
 
 import api.views
 import api.models
+

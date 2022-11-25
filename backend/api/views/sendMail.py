@@ -1,25 +1,26 @@
-from email.message import EmailMessage
-from flask import jsonify
-#from api import app,mysql
+from api import app,mysql
 from api.models import *
+from email.message import EmailMessage
+from flask import jsonify, request
 
 import smtplib, ssl
 import getpass
 
 
-@app.route("/SendMail")
+@app.route("/SendMail", methods=["POST"])
 def SendMail():
 
-    receiveur = SendMail.getMail()
+    receiveur = request.form.get('mail')
+    score = request.form.get('score')
     email = 'worldtourfrance2022@gmail.com'
     email_password = 'kcnkvfilxkusfhub'
     msg = EmailMessage()
     msg['subject'] = 'Resultat de votre test World Tour'
     msg['from'] = email
     msg['to'] = receiveur
-    #msg['to'] = 'haphuonf141198@gmail.com'
-   # content = 'Le résultat de votre test'
-    msg.set_content('votre résultat est')
+   
+    content = 'Bonjour, vous trouverez ci-joitn le résultat de votre test.' + '\n' + 'Le résultat de votre test est: ' 
+    msg.set_content(content)
 
 
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:

@@ -37,14 +37,6 @@ function Quiz(props){
 		else setShowForm(false);
 
 	}
-
-	// const handleFormMail = () => {
-	// 	if(mailValide === true){
-	// 		setShowEnvoieMail(true);
-	// 	}
-
-	// }
-
 	useEffect(() => {
 		fetch("/Quiz").then(
 			res => res.json()
