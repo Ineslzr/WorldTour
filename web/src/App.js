@@ -1,31 +1,17 @@
 import React from 'react';
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	Link
-  } from "react-router-dom";
-import ChoixPays from './components/FiltrePays/ChoixPays';
-import Questionnaire from './components/Questionnaire/questionnaire';
-import Quiz from './components/Quiz/Quiz';
-import Feature2 from './composants/featurePDF/feature2';
+import {Link} from "react-router-dom";
 
 function App(){
 	return(
 		<>
-		<Router>
-			<Routes>
-				<Route path="/Questionnaire" element={<Questionnaire/>}/>
-				<Route path="/ChoixPays" element={<ChoixPays/>}/>
-				<Route path="/Quiz" element={<Quiz/>}/>
-				<Route path="/Feature2" element={<Feature2/>}/>
-			</Routes>
-		</Router>	
-
-		<a href="/Quiz" class="active">Quiz</a> <br/>
-		<a href="/ChoixPays" class="active">Choix du pays</a><br/>
-		<a href="/Questionnaire" class="active">Questionnaire</a><br/>
-		<a href="/Feature2" class="active">Déposer un document pdf</a><br/>
+		<nav>
+				<Link to="/Quiz" relative="path">Quiz</Link><br/>
+				<Link to="/PropositionQuizByTheme" relative="path">Choisissez un quiz selon vos thèmes préférés !</Link><br/>	
+				<Link to="/ChoixPays" relative="path">Choix du pays</Link><br/>
+				<Link to="/Questionnaire" relative="path">Questionnaire</Link><br/>
+				<Link to="/Feature2" relative='path'>Déposer un document pdf</Link><br/>
+		</nav>
+		
 	</>
 	)  
 }

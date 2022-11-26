@@ -1,4 +1,6 @@
 from api import app,mysql
+from api.models.question import *
+from api.models.choix import *
 
 class Quiz():
     
@@ -13,3 +15,16 @@ class Quiz():
         cur.close()
 
         return fetchdata
+
+    @staticmethod
+    def createQuiz(id_quiz):
+        nom_quiz = Quiz.getNom()
+        questions = Question.getQuestions(id_quiz)
+        quiz = {"questions" : questions}
+
+        i = 0
+        while i < len(quiz["questions"]):
+            quiz["questions"][i]["choix"] = Choix.getChoix(questions[i]["id_question"])
+            i = i+1
+        
+        return quiz

@@ -1,0 +1,17 @@
+.buttonQuiz{
+    margin: 20px;
+}
+
+button{
+    background-color:#B1AFFF;
+    color:white;
+    font-weight:bold;
+}
+
+.wrapperPropositionQuiz{
+    width: 500px;
+    background-color: #B1E9A3;
+    text-align: center;
+    padding:50px;
+    border-radius: 20px;
+}
