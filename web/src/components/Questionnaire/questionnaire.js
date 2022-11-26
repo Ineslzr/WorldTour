@@ -1,6 +1,4 @@
 import React, {useState} from "react";
-//import Question from "./question";
-//import Propositions from "./propositions";
 import '../../styles/questionnaire/questionnaire.css';
 import Propositions from "./propositions";
 
@@ -14,32 +12,11 @@ function Questionnaire(props){
               { id:3, value: 'Sport', checked: false},
               { id:4, value: 'Art', checked: false},
           ]},
-          { question: 'Quelles langues parlez-vous ?',
-          propositions: [
-              { id:5, value: 'Anglais', checked: false},
-              { id:6, value: 'Allemand', checked: false},
-              { id:7, value: 'Arabe', checked: false},
-              { id:8, value: 'Italien', checked: false},
-          ]},
-          { question: 'Quels pays avez-vous visité ?',
-          propositions: [
-              { id:9, value: 'Maroc', checked: false},
-              { id:10, value: 'Italie', checked: false},
-              { id:11, value: 'Belgique', checked: false},
-              { id:12, value: 'Angleterre', checked: false},
-          ]},
-          { question: 'Qu\'est-ce qui vous intéresse dans la culture d\'un pays ?',
-          propositions: [
-              { id:13, value: 'Son histoire', checked: false},
-              { id:14, value: 'Sa gastronomie', checked: false},
-              { id:15, value: 'Les paysages', checked: false},
-              { id:16, value: 'L\'art', checked: false},
-          ] }
         ]
 
     });
 
-    const [reponse, setReponse] = useState([]);
+    const [reponse, setReponse] = useState("");
     const [isSend, setIsSend] = useState(false);
 
     const submitForm = async (e) => {
@@ -81,7 +58,7 @@ function Questionnaire(props){
     
         //on ajoute la réponse coché à la liste de réponse
         let rep=updatedItems[0][itemId].value;
-        setReponse(current => [...current,rep]);
+        setReponse(reponse+rep+',');
 
         console.log(reponse);
         

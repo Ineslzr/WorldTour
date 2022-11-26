@@ -3,6 +3,7 @@ import '../../styles/quiz/quiz.css';
 import Score from "./score";
 import Question from "./question.js";
 import ChoixQuestion from "./choixQuestion";
+import {useLocation} from 'react-router-dom';
 
 function Quiz(props){
 
@@ -10,6 +11,7 @@ function Quiz(props){
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const location = useLocation();
 
 	//const [country, setCountry] = useState("");
 
@@ -26,8 +28,10 @@ function Quiz(props){
 		}
 	};
 
+
 	useEffect(() => {
-		fetch("/Quiz").then(
+		let url="/Quiz/"+location.state.id;
+		fetch(url).then(
 			res => res.json()
 		).then(
 			data => {
@@ -55,7 +59,7 @@ function Quiz(props){
 		<div style={{display:"flex", flexDirection:"column"}}>
 
 			<div style={barreLateraleQ}>
-				<span> Quiz FRANCE </span>
+				<span>{location.state.nom}</span>
 			</div>
 
 			<div className='app'>
