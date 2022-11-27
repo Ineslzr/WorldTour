@@ -11,6 +11,8 @@ def test_pdf():
     reader=PyPDF2.PdfFileReader(file)
     page1=reader.getPage(0)
     pageExtracted=page1.extractText()
+    scoreBD=PdfScore.getScore()
+    scoreBD=scoreBD[0]['score']
     key1='réservation'
     key11='départ'
     key12='aéroport'
@@ -21,19 +23,20 @@ def test_pdf():
     key23='musée'
     if(type=='Avion'):
         if((type in pageExtracted)or(key1 in pageExtracted)and(key11 in pageExtracted)or(key12 in pageExtracted)or(key13 in pageExtracted)):
-              return jsonify(
+            PdfScore.modifyScore(scoreBD+10)
+            return jsonify(
                 typefichier= type,
                 key=[key1,key11,key12,key13],
-                score=10
-             )
+                score=scoreBD+10
+            )
         else: return jsonify("erreur1")
     elif(type=='Exposition'):
         if((type in pageExtracted)or(key2 in pageExtracted)or(key21 in pageExtracted)or(key22 in pageExtracted)or(key23 in pageExtracted)):
-              return jsonify(
+            return jsonify(
                 typefichier= type,
                 key=[key2,key21,key22,key23],
-                score=3
-             )
+                score=scoreBD+3
+            )
         else: return jsonify("erreur2")
     else: return jsonify("erreur")
 
