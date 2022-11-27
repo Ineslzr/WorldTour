@@ -5,7 +5,10 @@ function LecteurPdf(props){
 
     const [filetoupload, setFiletoupload] = useState();
     const [points, setPoints] = useState(false);
+    const [pdfKey, setPdfKey] = useState(['']);
+    const [pdfCat, setPdfCat] = useState('');
     const [choix,setChoix] = useState(false);
+
 
     const handleFileChange = async (e) =>{
         const file = e.target.files[0];
@@ -30,9 +33,11 @@ function LecteurPdf(props){
             }
             );
             let res = await response.json();
-            setPoints(res);
-            console.log(points);
-            if(Number.isInteger(res)){
+            setPdfKey(res['key']);
+            setPoints(res['score']);
+            setPdfCat(res['typefichier']);
+            // console.log(points);
+            if(Number.isInteger(res['score'])){
                 setChoix(true);
                 console.log(choix);
             }
@@ -60,7 +65,9 @@ function LecteurPdf(props){
             :choix == 0 ?
             <><div>OHH le tricheur </div></>
                  : 
-                 <div>Bravo, vous avez gagné {points} points ! </div>
+                 <div> <center><span>..... Apres verification du fichier {pdfCat}......</span></center><br></br>
+                 <span> Nous avons trouver les mots {pdfKey[0]}, {pdfKey[1]}, {pdfKey[2]}, {pdfKey[3]}</span><br></br><br></br>
+                   <center>Bravo, vous avez gagné {points} points ! </center> </div>
             }
            
             
