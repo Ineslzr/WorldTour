@@ -2,15 +2,12 @@ from api import app,mysql
 from api.models import *
 from flask import jsonify
 
-@app.route("/Quiz")
-def CreateQuiz():
-    nom_quiz = Quiz.getNom()
-    questions = Question.getQuestions(1)
-    quiz = {"questions" : questions}
-
-    i = 0
-    while i < len(quiz["questions"]):
-        quiz["questions"][i]["choix"] = Choix.getChoix(questions[i]["id_question"])
-        i = i+1
-
+@app.route("/Quiz/<id_quiz>")
+def CreateQuiz(id_quiz):
+    quiz = Quiz.createQuiz(id_quiz)
     return jsonify(quiz)
+
+@app.route("/quiz/<user_id>")
+def getQuizByRandomTheme(user_id):
+    rep = Questionnaire.getQuizIdByTheme(user_id)
+    return jsonify(rep)
