@@ -29,15 +29,16 @@ def test_pdf():
                 key=[key1,key11,key12,key13],
                 score=scoreBD+10
             )
-        else: return jsonify("erreur1")
+        else: return jsonify("erreur non avion")
     elif(type=='Exposition'):
         if((type in pageExtracted)or(key2 in pageExtracted)or(key21 in pageExtracted)or(key22 in pageExtracted)or(key23 in pageExtracted)):
+            PdfScore.modifyScore(scoreBD+3)
             return jsonify(
                 typefichier= type,
                 key=[key2,key21,key22,key23],
                 score=scoreBD+3
             )
-        else: return jsonify("erreur2")
+        else: return jsonify("erreur non expo")
     else: return jsonify("erreur")
 
 
