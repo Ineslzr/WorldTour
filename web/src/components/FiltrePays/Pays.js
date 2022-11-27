@@ -1,21 +1,29 @@
 import React, {useState, useEffect} from 'react';
 import '../../styles/quiz/quiz.css';
-import CaseNClickable from '../Cases/CaseNClickable'
-import { useNavigate } from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
-function ChoixPays(){
 
-    const continents = ["EUROPE"];
-    const countries = ["France", "Allemagne", "Italie", "Espagne", "Pologne"];
-    const [typeFilter, setTypeFilter] = useState('');
-    const navigation = useNavigate();
+function Pays(){
 
-    const goToCountryPage = (id_country, country_quiz) => {
-        navigation("/ChoixPays/" + country_quiz , {state:{id: id_country, country:country_quiz}});
+    const [quiz, setQuiz] = useState([]);
+    let navigate = useNavigate();
+    let { country } = useParams();
+
+    const goToQuiz = (id_country, country_quiz) => {
+        navigate("/Quiz", {state:{id: id_country, country:country_quiz}});
         console.log(id_country)
     } 
-
-    //CSS    
+	useEffect(() => {
+		let url="/ChoixPays/"+country;
+		fetch(url).then(
+			res => res.json()
+		).then(
+			data => {
+                setQuiz(data)
+			}
+		)
+	}, []);
+   
     const barreLateraleQ = {
 		display: "flex",
 		justifyContent: "space-evenly",
@@ -66,30 +74,25 @@ function ChoixPays(){
 
     return(
         <div style={{display:"flex", flexDirection:"column"}}>
-			<div style={{...barreLateraleQ, ...barreLateraleQFiltres}}>
-				<span> Choisissez un pays </span>
-				<div> Filtre 
-                    <input style={{marginLeft:"8px"}} name="filtre" type="search" value={typeFilter} onChange={e => setTypeFilter(e.target.value)} />
-                </div>  
+			<div style={{...barreLateraleQ}}>
+                <span>{country}</span>
 			</div>
 
             <div className='app' style={base}>
                 <div style={leftSideCountries}>
-                    <CaseNClickable intitule={continents[0]}/>
-                    
                     <div style={carreInformatif}>
-                        Testez vos connaissances à l'aide de quiz sur le pays choisi !
+                        <p>Choisissez un quiz pour gagner un badge !</p>
                     </div>
                 </div>
-
-                    <div style={rightSideCountries}>
-                    {countries.filter(c => c.startsWith(typeFilter.toUpperCase()) || c.startsWith(typeFilter.toLowerCase()) || typeFilter === '')
-                    .map((c,index) =>     
-                          <button key={index} style={lesboutons} onClick={()=>goToCountryPage(index, c)}>{c}</button>
-                    )}</div>
+                                
+                <div style={rightSideCountries}>
+                    {quiz.map((q) => (
+                        <button style={lesboutons} onClick={()=>goToQuiz(q.id_quiz, q.nom)}>{q.nom}</button>
+                    ))}
+                </div>
 		    </div>
         </div>
     )
 }
 
-export default ChoixPays;
+export default Pays;
