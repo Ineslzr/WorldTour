@@ -5,7 +5,7 @@ import Question from "./question.js";
 import ChoixQuestion from "./choixQuestion";
 import {useLocation} from 'react-router-dom';
 
-function Quiz(props){
+function Quiz(){
 
     const [questions,setQuestions] = useState([{}]);
 	const [showScore, setShowScore] = useState(false);
@@ -59,7 +59,7 @@ function Quiz(props){
 		<div style={{display:"flex", flexDirection:"column"}}>
 
 			<div style={barreLateraleQ}>
-				<span>{location.state.nom}</span>
+				<span>{location.state.country}</span>
 			</div>
 
 			<div className='app'>

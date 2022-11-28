@@ -28,3 +28,12 @@ class Quiz():
             i = i+1
         
         return quiz
+    
+
+    @staticmethod
+    def quizByCountry(country):
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM quiz q WHERE q.Pays ='" + country+ "';")
+        fetchdata = cur.fetchall()
+        cur.close()
+        return fetchdata
