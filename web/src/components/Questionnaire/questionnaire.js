@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import '../../styles/questionnaire/questionnaire.css';
-import Propositions from "./propositions";
 
 function Questionnaire(props){
     const [data, setData] = useState({
@@ -68,7 +67,7 @@ function Questionnaire(props){
 
     return(
         <div  className="questionnaire">
-            {isSend == false ?
+            {isSend === false ?
             (<><h1>Questionnaire : </h1>
             <form className="ui form" onSubmit={submitForm}>
                 {questionnaire.map((quest, index) => {

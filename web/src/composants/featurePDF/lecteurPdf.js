@@ -48,7 +48,7 @@ function LecteurPdf(props){
 
     return (
         <div id='propositionsection'>
-            {points == 0 ? 
+            {points === 0 ? 
             <>
                 <label for="doc-select">Choisissez le fichier pdf</label><br></br><br></br>
                 <form id="upload_document_form">
@@ -62,7 +62,7 @@ function LecteurPdf(props){
                 <br></br><button onClick={handleClickButton}>Envoyer pour verification</button><br></br><br></br>
                 <button onClick={props.handleClickButton}>retour</button></center>
                 </>
-            :choix == 0 ?
+            :choix === 0 ?
             <><div>OHH le tricheur </div></>
                  : 
                  <div> <center><span>..... Apres verification du fichier {pdfCat}......</span></center><br></br>

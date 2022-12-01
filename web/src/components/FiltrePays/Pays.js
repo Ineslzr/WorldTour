@@ -37,12 +37,6 @@ function Pays(){
 		fontWeight:"bold",
 		marginBottom:"15px"
     };
-    const barreLateraleQFiltres = {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        borderRadius: "7px"
-    };
     const leftSideCountries = {
         width:"60%"
     };

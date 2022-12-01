@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import '../../styles/quiz/quiz.css';
 import CaseNClickable from '../Cases/CaseNClickable'
 import { useNavigate } from 'react-router-dom';
