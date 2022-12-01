@@ -34,7 +34,7 @@ function Score(props){
 
     return(
         <div style={centrage} className='score-section'>
-			<p>Votre score est de {props.score} sur {props.nbQuestions} !</p>
+			<h2>Votre score est de {props.score} sur {props.nbQuestions} !</h2>
 
             <> {showResults ? <></> : 
             <div><button  style={btn} onClick={handleShowResults}>Voir mes réponses</button></div> }
