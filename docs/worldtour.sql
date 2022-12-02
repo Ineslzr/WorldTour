@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 27, 2022 at 12:12 PM
+-- Generation Time: Dec 02, 2022 at 05:37 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -132,21 +132,21 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id_question`, `id_quiz`, `intitule`) VALUES
-(1, 1, 'Quel est la capitale de la France ?'),
+(1, 1, 'Quelle est la capitale de la France ?'),
 (2, 1, 'Quel est le nom du président de la République ?'),
-(3, 1, 'Comment s\'appelle l\'hymne nationale ?'),
-(4, 1, 'Quel argent est utilisé ?'),
-(5, 1, 'Quelle langue est parlé ?'),
+(3, 1, 'Comment s\'appelle l\'hymne national ?'),
+(4, 1, 'Quelle monnaie circule ?'),
+(5, 1, 'Quelle langue est parlée ?'),
 (6, 2, 'Quel ingrédient n’est pas présent dans la quiche lorraine traditionnelle ?'),
 (7, 2, 'Quelle sauce accompagne traditionnellement la tête de veau ?'),
 (8, 2, 'Quel chef a inventé le moelleux au chocolat ?'),
 (9, 2, 'Laquelle de ces 3 meringues se prépare avec du sucre cuit ?'),
 (10, 2, 'Qu\'est-ce que la provençale soupe au pistou ?'),
 (11, 4, 'Parmi ces instruments, lequel ne fait pas partie des instruments du flamenco ?'),
-(12, 4, 'Combien y a-t-il de différentes périodes musicales en Espagne ?'),
+(12, 4, 'Combien y a-t-il de périodes musicales différentes en Espagne ?'),
 (13, 4, 'Quelle musique traditionnelle espagnole est née en Aragon ?'),
 (14, 4, 'Quelle est la traduction de \"oreja\" ?'),
-(15, 4, 'Qui est le plus grand artistes espagnols ?'),
+(15, 4, 'Qui est le plus grand artiste espagnol ?'),
 (16, 7, 'En quelle année a été créée la fédération allemande de football ?'),
 (17, 7, 'En 1909 les Allemands rencontrent les Anglais à Oxford et perdent. Quel fut le score ?'),
 (18, 7, 'L\'Allemagne a gagné 3 Coupes du monde. Pour combien de finales perdues ?'),
