@@ -67,7 +67,7 @@ function Quiz(){
 
 
     return(
-		<div style={{display:"flex", flexDirection:"column"}}>
+		<div style={{display:"flex", flexDirection:"column", marginBottom:"70px"}}>
 
 			<div style={barreLateraleQ}>
 				<span>{location.state.nom} {location.state.country}</span>
