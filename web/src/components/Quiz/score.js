@@ -19,7 +19,10 @@ function Score(props){
     const rep_right = {
         color: "green",
         margin:"1px"
-
+    };
+    const line_correction = {
+        display:"flex",
+        flexDirection:""
     };
     const rep_false = {
         color: "red",
@@ -31,6 +34,7 @@ function Score(props){
         fontSize: "12px"
     };
 
+   // console.log(props.g);
 
     return(
         <div style={centrage} className='score-section'>
@@ -42,9 +46,11 @@ function Score(props){
             {showResults ?
                 <>
                     {props.questions.map((e,index) => 
-                        <><p style={qu_styles}>{e.intitule}</p>
-                        <p style={{...props.choixUser[index].correct ? rep_right : rep_false}} >
-                            {props.choixUser[index].rep}</p>
+                        <>  <p style={qu_styles}>{e.intitule}</p>
+                            <span style={line_correction}> <p style={{...props.choixUser[index].correct ? rep_right : rep_false}}>{props.choixUser[index].rep} </p> &nbsp;&nbsp;
+                            {!props.choixUser[index].correct ? <p style={rep_right}>{props.choixUser[index].correction}</p> : <></>}
+                            </span>
+    
                         </>
                     )}
                 </>
