@@ -11,6 +11,7 @@ function Quiz(){
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [showForm,setShowForm]= useState(false);
 	const location = useLocation();
 
 	//const [country, setCountry] = useState("");
@@ -28,6 +29,13 @@ function Quiz(){
 		}
 	};
 
+	const handleFormMail = () => {
+		if(showForm === false){
+			setShowForm(true);
+		}
+		else setShowForm(false);
+
+	}
 
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
@@ -84,7 +92,6 @@ function Quiz(){
 					</>
 				)}
 			</div>
-
 		</div>
     )
 }
