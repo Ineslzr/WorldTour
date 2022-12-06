@@ -1,16 +1,16 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, {useState} from "react";
+import '../../styles/quiz/question.css';
 
-function App(){
-	return(
+
+function Accueil(props){
+    return(
 		<>
-		<div>
-		<button>Se connecter</button>
+        <button>Se connecter</button>
         <button>S'inscrire</button>
         <button>Home</button>
         <button>Contact</button>
         <button>Presentation</button>
-		</div>
+
 		<nav>
 			<Link to="/PropositionQuizByTheme" relative="path">Choisissez un quiz selon vos thèmes préférés !</Link><br/>	
 			<Link to="/ChoixPays" relative="path">Choix du pays</Link><br/>
@@ -22,4 +22,4 @@ function App(){
 	)  
 }
 
-export default App;
+export default Accueil;
