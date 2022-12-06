@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import '../../styles/quiz/quiz.css';
 import Score from "./score";
 import Question from "./question.js";
+import Mail from "./ShowFormulaire.js";
+import Acceptation from "./Acceptation.js";
+import ShowFormulaire from './ShowFormulaire.js';
 import ChoixQuestion from "./choixQuestion";
 import {useLocation} from 'react-router-dom';
 
@@ -11,6 +14,7 @@ function Quiz(){
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [showForm,setShowForm]= useState(false);
 	const location = useLocation();
 
 	//const [country, setCountry] = useState("");
@@ -28,6 +32,13 @@ function Quiz(){
 		}
 	};
 
+	const handleFormMail = () => {
+		if(showForm === false){
+			setShowForm(true);
+		}
+		else setShowForm(false);
+
+	}
 
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
@@ -84,7 +95,13 @@ function Quiz(){
 					</>
 				)}
 			</div>
-
+			{showScore ? (<div className='form-validation'>
+				{showForm ?(<ShowFormulaire/>):(
+					<Acceptation handleFormMail={handleFormMail} />) }
+				</div>
+		) : 
+		
+		(<></>)}
 		</div>
     )
 }
