@@ -11,6 +11,7 @@ import Feature2 from './composants/featurePDF/feature2';
 import PropositionQuizByTheme from './components/Quiz/PropositionQuizByTheme';
 import Pays from '../src/components/FiltrePays/Pays'
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

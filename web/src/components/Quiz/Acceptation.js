@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import ShowFormulaire from './ShowFormulaire.js';
+import Quiz from './Quiz.js';
 import '../../styles/quiz/quiz.css';
-import Mail from "./ShowFormulaire.js";
+
 
 
 
@@ -12,8 +14,7 @@ function Acceptation(props){
             setMailValide(true);
         }
     
-    }
-   
+    }   
     return(
         <div  className='button-valide'>
 				<button style={{backgroundColor:"#C37857", border:"#C37857 1px solid"}} onClick={props.handleFormMail}> Voulez-vous recevoir votre résultat par mail ?</button>

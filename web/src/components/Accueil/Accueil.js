@@ -1,15 +1,23 @@
 import React, {useState} from "react";
-import '../../styles/quiz/question.css';
+import '../../styles/home/home.css';
+import {Link} from "react-router-dom";
 
 
 function Accueil(props){
     return(
 		<>
-        <button>Se connecter</button>
-        <button>S'inscrire</button>
-        <button>Home</button>
-        <button>Contact</button>
-        <button>Presentation</button>
+		<div className="menu-home">
+			<div>
+        		<button>Home</button>
+        		<button>Contact</button>
+        		<button>Presentation</button>
+			</div>
+			<div>	
+       		 	<button>Se connecter</button> 
+        		<button>S'inscrire</button>
+			</div>
+
+		</div>
 
 		<nav>
 			<Link to="/PropositionQuizByTheme" relative="path">Choisissez un quiz selon vos thèmes préférés !</Link><br/>	

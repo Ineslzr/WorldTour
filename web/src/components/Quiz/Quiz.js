@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import '../../styles/quiz/quiz.css';
 import Score from "./score";
 import Question from "./question.js";
-import Mail from "./ShowFormulaire.js";
 import Acceptation from "./Acceptation.js";
 import ShowFormulaire from './ShowFormulaire.js';
 import ChoixQuestion from "./choixQuestion";
