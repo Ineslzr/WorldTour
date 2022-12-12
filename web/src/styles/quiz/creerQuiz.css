@@ -1,0 +1,36 @@
+.makeQuiz {
+    display: block;
+    width: 1200px;
+    background-color: aquamarine;
+    padding : 50px;
+    border-radius: 50px;    
+    align-items: center;
+    text-align: center;
+}
+
+.infoQuizContainer{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.questionChoix{
+    padding: 15px;
+}
+
+.submitNewQuiz{
+    background-color:#B1AFFF;
+    color:white;
+    font-weight:bold;
+    border-color: transparent;
+    height:40px;
+    width:200px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.quizInsert{
+    align-items: center;
+}
