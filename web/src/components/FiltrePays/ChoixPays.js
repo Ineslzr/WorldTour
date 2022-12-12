@@ -1,19 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../../styles/quiz/quiz.css';
 import CaseNClickable from '../Cases/CaseNClickable'
-import CaseClickable from '../Cases/CaseClickable'
-
+import { useNavigate } from 'react-router-dom';
 
 function ChoixPays(){
 
-    //Ajout des pays à l'aide de la bdd
-    //const [countries, setCountries] = useState([{}]);
-    const countries = ["FRANCE", "ALLEMAGNE", "ITALIE", "ESPAGNE", "POLOGNE"];
-    const [typeFilter, setTypeFilter] = useState('');
-
-    //On remplacera par des données dans la base
     const continents = ["EUROPE"];
-    
+    const countries = ["France", "Allemagne", "Italie", "Espagne", "Pologne"];
+    const [typeFilter, setTypeFilter] = useState('');
+    const navigation = useNavigate();
+
+    const goToCountryPage = (id_country, country_quiz) => {
+        navigation("/ChoixPays/" + country_quiz , {state:{id: id_country, country:country_quiz}});
+        console.log(id_country)
+    } 
+
     //CSS    
     const barreLateraleQ = {
 		display: "flex",
@@ -58,6 +59,10 @@ function ChoixPays(){
         flexDirection: "column",
         width: "40%"
     };
+    const lesboutons = {
+        marginTop: "5px",
+        marginBottom: "5px"
+    };
 
     return(
         <div style={{display:"flex", flexDirection:"column"}}>
@@ -73,16 +78,15 @@ function ChoixPays(){
                     <CaseNClickable intitule={continents[0]}/>
                     
                     <div style={carreInformatif}>
-                        Testez vos connaissances du pays choisi pour avoir un badge du niveau supérieur !
+                        Testez vos connaissances à l'aide de quiz sur le pays choisi !
                     </div>
                 </div>
-                                
-                <div style={rightSideCountries}>
-                    {countries.filter(e => e.startsWith(typeFilter.toUpperCase()) || e.startsWith(typeFilter.toLowerCase()) || typeFilter === '')
-                        .map(e => 
-                    <CaseClickable intitule={e} />
-                    )}
-                </div>
+
+                    <div style={rightSideCountries}>
+                    {countries.filter(c => c.startsWith(typeFilter.toUpperCase()) || c.startsWith(typeFilter.toLowerCase()) || typeFilter === '')
+                    .map((c,index) =>     
+                          <button key={index} style={lesboutons} onClick={()=>goToCountryPage(index, c)}>{c}</button>
+                    )}</div>
 		    </div>
         </div>
     )
