@@ -29,6 +29,7 @@ class Quiz():
         
         return quiz
 
+
     @staticmethod
     def insertInfoQuiz(nom,pays,theme):
 
@@ -73,4 +74,11 @@ class Quiz():
 
         return "ok"
 
-    
+    @staticmethod
+    def quizByCountry(country):
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM quiz q WHERE q.Pays ='" + country+ "';")
+        fetchdata = cur.fetchall()
+        cur.close()
+        return fetchdata
+

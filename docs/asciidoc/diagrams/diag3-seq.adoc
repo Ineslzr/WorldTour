@@ -1,0 +1,14 @@
+[plantuml, target=diag-seq-3, format=png]
+....
+User -> Quiz : POST /quiz/creation  (infoQuiz,quiz)
+Quiz -> Quiz: isertInfoQuiz(nom,pays,theme)  idQuiz
+loop for question in quiz
+    Quiz -> Question : insertQuestion(idQuiz,question["intitule"])
+    Quiz <-- Question : idQuestion
+    loop for choix in question['choix']
+        Quiz -> Choix : insertChoix(idQuestion, choix['intitule'], choix['isCorrect'])
+        Quiz <-- Choix : reponse
+    end
+end
+User <-- Quiz : reponse
+....

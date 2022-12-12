@@ -8,7 +8,7 @@ function CaseClickable(props){
 
 
     return(
-        <button className='btn'>{props.intitule}</button>
+        <button onClick={()=>console.log("z")} className='btn'>{props.intitule}</button>
     )
 }
 

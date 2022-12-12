@@ -19,3 +19,10 @@ def insertNewQuiz():
     rep = Quiz.insertNewQuiz(infoQuiz, quiz)
 
     return jsonify(rep)
+
+
+@app.route("/ChoixPays/<Country>")
+def getQuizByCountry(Country):
+    quiz = Quiz.quizByCountry(Country)
+    return jsonify(quiz)
+
