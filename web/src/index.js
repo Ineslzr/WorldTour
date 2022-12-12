@@ -9,6 +9,7 @@ import Questionnaire from './components/Questionnaire/questionnaire';
 import Quiz from './components/Quiz/Quiz';
 import Feature2 from './composants/featurePDF/feature2';
 import PropositionQuizByTheme from './components/Quiz/PropositionQuizByTheme';
+import CreerQuiz from './components/Quiz/creationQuiz/creerQuiz';
 import Pays from '../src/components/FiltrePays/Pays'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,6 +23,7 @@ root.render(
         <Route path="/Quiz" element={<Quiz/>}/>
         <Route path="/Feature2" element={<Feature2/>}/>
         <Route path="/PropositionQuizByTheme" element={<PropositionQuizByTheme/>}/>
+        <Route path="/CreerQuiz" element={<CreerQuiz/>}/>
         <Route path="/ChoixPays/:country" element={<Pays/>}/>
       </Routes>
     </BrowserRouter>
