@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import '../../styles/home/home.css';
-import {Link} from "react-router-dom";
+import {Link } from "react-router-dom";
 
 
 function Accueil(props){
@@ -16,7 +16,6 @@ function Accueil(props){
        		 	<button>Se connecter</button> 
         		<button>S'inscrire</button>
 			</div>
-
 		</div>
 
 		<nav>
