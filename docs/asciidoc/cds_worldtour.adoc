@@ -180,16 +180,18 @@ Donc lorsque nous essayons de lancer le back, tous les __init__.py seront vérif
 
 * [.underline]#*Diagrammes de séquence des interactions front/back (par feature, voir le back comme une boîte noire)*#
 
-Diagramme de séquence feature quiz :
+Diagramme de séquence feature "Quiz" :
 
 image::diagrams/diag-seq-1.png[Logo Oxiane]
 
 <<<
 
-Diagramme de séquence feature PDF :
+Diagramme de séquence feature "PDF" :
 
 image::diagrams/diag-seq-2.png[Logo Oxiane]
 
 <<<
 
+Diagramme de séquence feature "Création quiz" : 
 
+image::diagrams/diag-seq-3.png[Logo Oxiane]
