@@ -10,6 +10,7 @@ import Quiz from './components/Quiz/Quiz';
 import Feature2 from './composants/featurePDF/feature2';
 import PropositionQuizByTheme from './components/Quiz/PropositionQuizByTheme';
 import Pays from '../src/components/FiltrePays/Pays'
+import Historique from './composants/featurePDF/historique';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/ChoixPays" element={<ChoixPays/>}/>
         <Route path="/Quiz" element={<Quiz/>}/>
         <Route path="/Feature2" element={<Feature2/>}/>
+        <Route path="/Historique" element={<Historique/>}/>
         <Route path="/PropositionQuizByTheme" element={<PropositionQuizByTheme/>}/>
         <Route path="/ChoixPays/:country" element={<Pays/>}/>
       </Routes>

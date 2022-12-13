@@ -1,3 +1,5 @@
+import datetime
+from MySQLdb import Date
 import PyPDF2
 from api import app, mysql
 from api.models import *
@@ -24,6 +26,7 @@ def test_pdf():
     if(type=='Avion'):
         if((type in pageExtracted)or(key1 in pageExtracted)and(key11 in pageExtracted)or(key12 in pageExtracted)or(key13 in pageExtracted)):
             PdfScore.modifyScore(scoreBD+10)
+            Historique.updateHistorique('Maroua',15,type,datetime.date.today())
             return jsonify(
                 typefichier= type,
                 key=[key1,key11,key12,key13],
@@ -32,6 +35,7 @@ def test_pdf():
         else: return jsonify("erreur non avion")
     elif(type=='Exposition'):
         if((type in pageExtracted)or(key2 in pageExtracted)or(key21 in pageExtracted)or(key22 in pageExtracted)or(key23 in pageExtracted)):
+            Historique.updateHistorique('Maroua',3,type,datetime.date.today())
             PdfScore.modifyScore(scoreBD+3)
             return jsonify(
                 typefichier= type,

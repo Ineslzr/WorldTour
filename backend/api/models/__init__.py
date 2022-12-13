@@ -4,3 +4,4 @@ from api.models.question import *
 from api.models.choix import *
 from api.models.pdfScore import *
 from api.models.questionnaire import *
+from api.models.historique import *

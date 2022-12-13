@@ -1,0 +1,23 @@
+.app{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-row-gap: 10px;
+    width: 450px;
+    min-height: 200px;
+    border-radius: 7px;
+    background-color: #B1E9A3;
+    border: 2px solid #7ac38f;
+    padding: 20px;
+  }
+.title{
+  display: grid;
+  background-color: white;
+  grid-template-columns: 70% 30%;
+
+}
+.historique{
+  display: grid;
+  background-color: white;
+  grid-template-rows: auto;
+  grid-row-gap: 5px;
+}
