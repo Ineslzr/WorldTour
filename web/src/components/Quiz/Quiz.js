@@ -36,7 +36,9 @@ function Quiz(){
 		} else {
 			setShowScore(true);
 		}
-	};
+	
+		
+};
 
 	const handleFormMail = () => {
 		if(showForm === false){
@@ -45,7 +47,24 @@ function Quiz(){
 		else setShowForm(false);
 
 	}
+const sendScoreHistorique = async (e)=>{
+	e.preventDefault();
+	if (currentQuestion!= questions.length+1) {
+		const scoreResult = new FormData();
+		scoreResult.append('scoreHistorique',score);
+		scoreResult.append('typeHistorique','quiz')
+		let response = await fetch('/scoreQuiz',
+		{
+			method: 'post',
+			body: scoreResult,
+		}
+		);
+		// console.log(response);
 
+		let res = await response.json();
+		console.log(res);
+}
+}
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
 		fetch(url).then(
@@ -82,7 +101,8 @@ function Quiz(){
 
 			<div className='app'>
 				{showScore ? (
-					<Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} />
+					<div className='score'><Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} /><button onClick={sendScoreHistorique}>save</button>
+					</div>
 				) : (
 					<>
 						<Question 
