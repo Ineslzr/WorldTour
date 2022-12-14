@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import '../../styles/quiz/quiz.css';
 import CaseNClickable from '../Cases/CaseNClickable'
 import { useNavigate } from 'react-router-dom';
@@ -85,7 +85,7 @@ function ChoixPays(){
                     <div style={rightSideCountries}>
                     {countries.filter(c => c.startsWith(typeFilter.toUpperCase()) || c.startsWith(typeFilter.toLowerCase()) || typeFilter === '')
                     .map((c,index) =>     
-                          <button key={index} style={lesboutons} onClick={()=>goToCountryPage(index, c)}>{c}</button>
+                          <button style={lesboutons} onClick={()=>goToCountryPage(index, c)}>{c}</button>
                     )}</div>
 		    </div>
         </div>
