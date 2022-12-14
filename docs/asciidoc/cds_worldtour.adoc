@@ -184,7 +184,6 @@ image::img/3-MAIL/maq6_2.jpg[Logo Oxiane]
 <<<
 
 
-
 * [.underline]#*Diagramme de classes global (partie métier)*#
 
 image::diagrams/diag-class-1.png[Logo Oxiane]
@@ -214,18 +213,24 @@ Donc lorsque nous essayons de lancer le back, tous les __init__.py seront vérif
 
 * [.underline]#*Diagrammes de séquence des interactions front/back (par feature, voir le back comme une boîte noire)*#
 
-Diagramme de séquence feature "Quiz" :
+* [.underline]#*Diagramme de séquence feature "Quiz" :*#
 
 image::diagrams/diag-seq-1.png[Logo Oxiane]
 
 <<<
 
-Diagramme de séquence feature "PDF" :
+* [.underline]#*Diagramme de séquence feature "PDF" :*#
 
 image::diagrams/diag-seq-2.png[Logo Oxiane]
 
 <<<
 
-Diagramme de séquence feature "Création quiz" : 
+* [.underline]#*Diagramme de séquence feature "Création quiz" :*# 
 
 image::diagrams/diag-seq-3.png[Logo Oxiane]
+
+<<<
+
+* [.underline]#*Diagramme de séquence feature "Feature historique" :*# 
+
+image::diagrams/diag-seq-4.png[Logo Oxiane]
