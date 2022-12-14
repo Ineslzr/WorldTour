@@ -85,7 +85,7 @@ function ChoixPays(){
                     <div style={rightSideCountries}>
                     {countries.filter(c => c.startsWith(typeFilter.toUpperCase()) || c.startsWith(typeFilter.toLowerCase()) || typeFilter === '')
                     .map((c,index) =>     
-                          <button style={lesboutons} onClick={()=>goToCountryPage(index, c)}>{c}</button>
+                          <button key={c.id} style={lesboutons} onClick={()=>goToCountryPage(index, c)}>{c}</button>
                     )}</div>
 		    </div>
         </div>
