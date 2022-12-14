@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../styles/mail/envoieMail.css';
+import '../../styles/mail/envoieMail.css';
 import Score from "./score";
 
 function ShowFormulaire(prop){
