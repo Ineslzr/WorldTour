@@ -1,14 +1,18 @@
-import React, {useState, useEffect} from 'react';
-import Quiz from './components/Quiz.js';
-import Mail from './components/ShowFormulaire.js';
-
+import React from 'react';
+import {Link} from "react-router-dom";
 
 function App(){
 	return(
-        <div className='application'>
-			<Quiz/>
-			
-		</div>
+		<>
+		<nav>
+			<Link to="/PropositionQuizByTheme" relative="path">Choisissez un quiz selon vos thèmes préférés !</Link><br/>
+			<Link to="/CreerQuiz" relative='path'>Créer un quiz</Link><br/>	
+			<Link to="/ChoixPays" relative="path">Choix du pays</Link><br/>
+			<Link to="/Questionnaire" relative="path">Questionnaire</Link><br/>
+			<Link to="/Feature2" relative='path'>Déposer un document pdf</Link><br/>
+		</nav>
+		
+	</>
 	)  
 }
 

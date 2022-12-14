@@ -1,0 +1,24 @@
+[plantuml, target=diag-seq-1, format=png]
+....
+User -> Interface : getQuiz(idQuiz)
+Interface -> API: GET /quiz/idQuiz
+API -> Quiz : getQuiz(idQuiz)
+Quiz -> Question : getQuestions(idQuiz)
+Quiz <-- Question : questions
+Quiz -> Choix : getChoix(idQuiz)
+Quiz <-- Choix : choix quiz
+Quiz -> Quiz : former quiz
+API <-- Quiz : quiz
+API -> API : créer JSON
+Interface <-- API : quiz json
+User <-- Interface : quiz
+User -> User : repondre
+User -> Interface : réponses
+Interface -> API : POST /quiz/resultat/idQuiz&réponses
+API -> Quiz : estCorrecte(idQuiz,réponses)
+Quiz -> Reponse : estCorrecte(idQuiz,réponses)
+Quiz <-- Reponse : resultat
+API <-- Quiz : resultat
+Interface <-- API : resultat
+User <-- Interface : afficher resultat
+....

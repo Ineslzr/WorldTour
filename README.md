@@ -1,5 +1,5 @@
 # WorldTour
-[![CircleCI](https://img.shields.io/circleci/build/gh/Ineslzr/WorldTour/main?logo=CircleCi&style=flat-square)](https://app.circleci.com/pipelines/github/Ineslzr/WorldTour) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=Ineslzr_WorldTour&metric=alert_status)](https://sonarcloud.io/dashboard?id=Ineslzr_WorldTour) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Ineslzr_WorldTour&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Ineslzr_WorldTour) [![codecov](https://codecov.io/gh/Ineslzr/WorldTour/branch/main/graph/badge.svg?token=ERJAI8ON50)](https://codecov.io/gh/Ineslzr/WorldTour) ![GitHub release](https://img.shields.io/github/v/release/Ineslzr/WorldTour?style=flat-square)
+[![CircleCI](https://img.shields.io/circleci/build/gh/Ineslzr/WorldTour/main?logo=CircleCi&style=flat-square)](https://app.circleci.com/pipelines/github/Ineslzr/WorldTour) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=Ineslzr_WorldTour&metric=alert_status)](https://sonarcloud.io/dashboard?id=Ineslzr_WorldTour) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Ineslzr_WorldTour&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Ineslzr_WorldTour) [![codecov](https://codecov.io/gh/Ineslzr/WorldTour/branch/main/graph/badge.svg?token=ERJAI8ON50)](https://codecov.io/gh/Ineslzr/WorldTour) ![GitHub release](https://img.shields.io/github/v/release/Ineslzr/WorldTour?style=flat-square) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Prérequis
 
@@ -52,7 +52,7 @@ Vous devriez voir :
 
 ## Lancement du frontend
 
-Ouvrez un second terminale et tapez ces 2 commandes :
+Ouvrez un second terminal et tapez ces 2 commandes :
 
 ```cmd
 cd web
@@ -60,6 +60,16 @@ npm start
 ```
 
 Si tout se passe bien, le navigateur devrait s'ouvrir de lui-même.
+
+
+## Lancement automatique du backend et du frontend
+
+Dans le dossier source "WorldTour", ouvrez un terminal et tapez cette commande :
+
+``` ./back_launch.bat```
+
+Si tout se passe bien, le navigateur devrait s'ouvrir tout seul.
+
 
 **Et voilà ! L'application devrait être lancée.**
 

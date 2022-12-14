@@ -1,0 +1,197 @@
+:pdf-theme: theme.yml
+
+= WorldTour
+
+[soustitles]#*PARTIE 1 : Synthèse*#
+
+* [.underline]#*Titre du projet, abréviation, logo*#
+
+
+Titre : Faire le tour du monde sans avoir besoin de se déplacer  
+
+Abréviation : World Tour
+
+Logo :
+
+image::img/logo.jpg[Logo Oxiane]
+
+* [.underline]#*Membres de l'équipe*#
+
+Elodie Saint Aubin - Maroua Ouahouah - Ha Phuong Tran - Inès Lazar
+
+* [.underline]#*Présentation (contexte, problématique et gain attendu, motivation de l'équipe par rapport au sujet, concurrence / état de l'art de l'existant et placement par rapport à cela)*#
+
+Avec internet et notamment les réseaux sociaux, nous sommes constamment exposés à des photos de paysage, de vacances ou de personnalités publiques qui montrent leur quotidien aux quatre coins du monde.
+
+C’est dans cet environnement que nous vivons, ce qui peut donner à un très grand nombre cette envie de voyager et de découvrir de nouvelles cultures. Malheureusement, nous sommes dans un contexte où voyager est devenu excessivement cher et n’est pas du tout à la portée de tous. C’est pourquoi nous nous sommes dit que si les gens ne pouvaient pas aller découvrir le monde, alors nous ramènerions le monde à eux.
+
+La concurrence il y en a, les idées de sites autour du voyage sont nombreuses et il en existe plein comme par exemple VAWAA ( Vacation With An Artist) qui propose de découvrir la culture d’un pays à travers un artiste local ce qui est un concept original, ou double sens qui propose la culture d’un pays à travers entre autres des photos de voyage. 
+
+Cependant, nous ne voulons pas seulement exposer la culture juste d’un point de vue extérieur mais vraiment impliquer l’utilisateur dans sa démarche culturelle. Nous voulons donc mettre en place un système de badge par pays. Un badge correspond à notre niveau de connaissances et d’implication dans un pays. Il y a donc plusieurs niveaux de badge allant de débutant à expert. Pour monter en grade, il faut gagner des points, ces points se gagnent en participant à des quiz, en apprenant la langue, en ayant cuisiné des plats traditionnels, etc. En résumé, il faut prouver par les actes que nous en apprenons plus sur un pays. Cela devient un système de récompenses, plus on est investi et plus on gagne des points, nous voulons donc donner à l’utilisateur l’envie constante de progresser. 
+
+<<<
+* [.underline]#*Personas et fonctionnalités de leur point de vue*#
+
+*_Jeune Voyageur :_*
+
+[.underline]#Contexte :# Une jeune qui aime bien faire le voyage pour découvrir les différentes cultures et paysages pour enrichir ses connaissances. Elle a besoin d’apprendre les langues des pays d’accueil, avoir des vues sur les nouvelles cultures. En tant que jeune, elle n’a pas beaucoup de temps et ni de budget. Elle souhaite prendre 30 minutes de libre par jour pour s’amuser par l’apprentissage d’une nouvelle langue et regarder des vidéos d’un nouveau pays présenté sur notre site.
+
+[.underline]#Fonctionnalités :# 
+
+.. Elle a son compte qui l’aide à enregistrer ses historiques de l’apprentissage, des vidéos qu’elle a regardées et des points qu’elle a gagnés après des évaluations de son niveau. 
+
+.. Favoris : Elle a besoin de marquer tous les informations en favoris pour la facilité à accéder.
+
+.. Des quiz à passer pour pouvoir gagner des badges.
+
+.. Contacter les admins si besoin.
+
+.. Envoyer un mail lors de la réinitialisation de son mot de passe.
+
+.. Des propositions envoyées automatiquement par l’application.
+
+*_Administrateur :_* 
+
+[.underline]#Contexte :#  L’administrateur, c’est ce qui gère l’application. Avec ses équipes de développement de l’application, il peut collaborer avec les équipes des enseignants qui donnent des cours de langues, l’équipe de marketing pour faire publier ses advertisements, l’équipe de dev pour mettre à disposition aux utilisateurs plus des fonctions et avancements. 
+
+[.underline]#Fonctionnalités :# 
+
+.. Gérer les droits d’accès des utilisateurs et des collaborateurs. 
+
+.. Ajouter/Supprimer des admins tant qu’il a besoin.
+
+.. Mettre à jour/ vérifier/ valider des publications sur l’application.
+
+.. Gestion des utilisateurs.
+
+.. Gestion des quiz.
+
+
+* [.underline]#*Prévision marketing*#
+
+Nous pensons qu’aujourd’hui, les réseaux sociaux et en particulier Instagram et TikTok, sont l’outil le plus puissant pour promouvoir un projet, surtout lorsque le thème est le voyage. L’utilisation de flyers ou d’enquêtes n’est plus tellement nécessaire. 
+
+Le plus important est le premier contact visuel qu’aura une personne lorsqu’elle tombera sur une de nos publications, que ce soit une vidéo promotionnelle ou simplement des photos des pages de notre site. C’est pourquoi nous accorderons une place très importante à l’élaboration de nos publications : montage dynamique de qualité et moderne, des images très visuelles et marquantes avec des couleurs vives mais harmonieuses. Nous voulons donner envie de cliquer sur le lien du site dès les premières secondes de pub. 
+
+<<<
+
+[soustitles]#*PARTIE 2 : Aspects techniques*#
+
+* [.underline]#*Type d'application (web, mobile)*#
+Nous avons décidé pour une expérience utilisateur optimale de développer un site web.
+
+* [.underline]#*Schéma architectural de l'application (front / API / back /persistance)*#
+
+image::img/api_schema.png[Logo Oxiane]
+
+* [.underline]#*Plateforme technologique (langages utilisés, frameworks de test, de lien métier/API, métier/persistance)*#
+
+Frontend : ReactJS
+Backend : API REST en Flask et le code métier en Python
+Framework de test : pytest et pytest-cov
+Lien métier/API : framework Flask
+Lien métier/persistance : BD MySQL, requête SQL avec Python
+
+* [.underline]#*Plateforme opérationnelle (gestion de versions, build, qualité de code, CI, déploiement)*#
+
+Gestionnaire de versions : github
+build et CI : Circle CI
+Qualité de code : SonarCloud
+Couverture de code : Codecov
+
+* [.underline]#*Interconnection avec systèmes / API distantes (en prévision M1 semestre 2 et M2)*#
+
+Utilisation d’une API de géocodage et de cartes
+
+* [.underline]#*Acquisition de données, usage intelligent des données (en prévision M2)*#
+
+Machine learning (utilisation photos déposé par l’utilisateur)
+
+<<<
+
+[soustitles]#*PARTIE 3 : Modélisation*#
+
+* [.underline]#*Maquettes du front-end correspondant à la feature (une ou plusieurs représentations d'interface, avec la description des enchaînements)*#
+
+*(Grande) Feature 1 : Créer un quiz*
+
+image::img/maq1_1.png[Logo Oxiane]
+
+image::img/maq1_2.png[Logo Oxiane]
+
+image::img/maq1_3.png[Logo Oxiane]
+
+<<<
+
+*(Grande) Feature 2 : Joindre un fichier (pdf) pour permettre à l'utilisateur de gagner des points*
+
+image::img/maq2_1.png[Logo Oxiane]
+
+image::img/maq2_2.png[Logo Oxiane]
+
+image::img/maq2_3.png[Logo Oxiane]
+
+<<<
+
+*(Petite) Feature 3 : Filtre quiz par pays*
+
+image::img/maq3_1.png[Logo Oxiane]
+
+image::img/maq3_2.png[Logo Oxiane]
+
+image::img/maq3_3.png[Logo Oxiane]
+
+<<<
+
+*(Petite) Feature 4 : Questionnaire d'introduction*
+
+image::img/maq4_1.png[Logo Oxiane]
+
+image::img/maq4_2.png[Logo Oxiane]
+
+<<<
+
+* [.underline]#*Diagramme de classes global (partie métier)*#
+
+image::diagrams/diag-class-1.png[Logo Oxiane]
+
+<<<
+
+* [.underline]#*Description API back (ex REST)*#
+
+image::img/diag-api-2.png[Logo Oxiane]
+
+ 
+Le fichier [red]#*run.py*# est le point d’entrée de notre API rest
+ 
+Le [green]#*dossier api*# contient deux autres dossiers : views et models
+ 
+Le [green]#*dossier views*# : contient plusieurs fichiers, un par entité ( home, user, quiz, …). Dans ces fichiers, nous retrouverons les routes c’est-à-dire que chaque fonction répond à une requête web précisée par un URL.
+Par exemple, dans le fichier user.py, on retrouve une fonction Users qui correspond à l’URL « /Users ».
+De plus, ces fonctions peuvent appeler celles qui proviennent des fichiers du dossier [green]#*models*#.
+ 
+Le [green]#*dossier models*# : de la même manière que le dossier views, il contient plusieurs fichiers, un par entité ( home, user, quiz, …). C’est dans ce dossier que nous retrouvons le code métier et les requêtes vers la base de données.
+ 
+Dans chaque dossier, il y a un fichier *__init__.py* qui contient toutes les importations des fichiers/dossiers du dossier en question.
+Par exemple, le __init__.py de [green]#*api*# importe [green]#*views*# et [green]#*models*#, et le __init__.py de views importe tous les fichiers qui sont dans le dossier [green]#*views*#.
+Donc lorsque nous essayons de lancer le back, tous les __init__.py seront vérifiés et si nous importons un fichier qui n’existe pas alors cela nous donnera une erreur et empêchera le lancement.
+
+<<<
+
+* [.underline]#*Diagrammes de séquence des interactions front/back (par feature, voir le back comme une boîte noire)*#
+
+Diagramme de séquence feature "Quiz" :
+
+image::diagrams/diag-seq-1.png[Logo Oxiane]
+
+<<<
+
+Diagramme de séquence feature "PDF" :
+
+image::diagrams/diag-seq-2.png[Logo Oxiane]
+
+<<<
+
+Diagramme de séquence feature "Création quiz" : 
+
+image::diagrams/diag-seq-3.png[Logo Oxiane]

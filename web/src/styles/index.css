@@ -1,5 +1,6 @@
 body {
-  margin: 270px auto;
+  margin: 0px auto;
+  margin-top: 200px;
   font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;;  
   display: flex;
   align-items: center;
