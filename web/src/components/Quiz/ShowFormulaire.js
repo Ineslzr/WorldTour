@@ -5,7 +5,7 @@ import Score from "./score";
 function ShowFormulaire(prop){
     const [mail, setMail] = useState("")
     const [showScore, setShowScore] = useState(false);
-    setShowScore(true);
+
     const validerMail = async (e) => {
         e.preventDefault();
         const data = new FormData();
