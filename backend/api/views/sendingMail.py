@@ -7,7 +7,7 @@ import smtplib, ssl
 import getpass
 
 
-@app.route("/SendMail", methods=["POST"])
+@app.route("/test", methods=["POST"])
 def SendMail():
 
     receiveur = request.form.get('mail')
