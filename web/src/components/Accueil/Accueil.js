@@ -47,6 +47,9 @@ function Accueil(props){
             	<option value="/ChoixPays">Choix du pays</option>
 				<option value= "/Questionnaire">Questionnaire</option> 
 				<option value= "/Feature2">Déposer un document pdf</option> 
+				<option value= "/Historique">Historique</option> 
+				<option value= "/CreerQuiz">Créer un quiz</option> 
+
         	</select>
 			
 		</div>
