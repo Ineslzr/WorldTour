@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import '../../styles/quiz/quiz.css';
 
 function Score(props){
-
     const [showResults, setShowResults] = useState(false);
 
     const handleShowResults = () => {
@@ -39,6 +38,8 @@ function Score(props){
     return(
         <div style={centrage} className='score-section'>
 			<h2>Votre score est de {props.score} sur {props.nbQuestions} !</h2>
+            <br></br>
+            <h2>Vous avez remporté {props.score} points</h2>
 
             <> {showResults ? <></> : 
             <div><button  style={btn} onClick={handleShowResults}>Voir mes réponses</button></div> }
@@ -57,6 +58,8 @@ function Score(props){
             : 
                 <></>
             }</>
+
+    
 		</div>
     )
 }
