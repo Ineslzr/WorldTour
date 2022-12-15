@@ -180,6 +180,7 @@ image::img/3-MAIL/maq6_2.jpg[Logo Oxiane]
 
 *(Petite) Feature 8 : Page d'accueil*
 
+image::img/10-ACCUEIL/maq10_1.png[Logo Oxiane]
 
 <<<
 
