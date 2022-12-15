@@ -48,6 +48,24 @@ function Quiz(){
 
 	}
 
+	const sendScoreHistorique = async (e)=>{
+		e.preventDefault();
+		if (currentQuestion!= questions.length+1) {
+			const scoreResult = new FormData();
+			scoreResult.append('scoreHistorique',score);
+			scoreResult.append('typeHistorique','quiz')
+			let response = await fetch('/scoreQuiz',
+			{
+				method: 'post',
+				body: scoreResult,
+			}
+			);
+			// console.log(response);
+	
+			let res = await response.json();
+			console.log(res);
+	}
+	}
 
 
 	useEffect(() => {
