@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import '../../styles/home/home.css';
 import { useNavigate } from 'react-router-dom';
+import logo from './logo1.JPG';
 
 
 function Accueil(props){
@@ -20,7 +21,7 @@ function Accueil(props){
     return(
 		<>
 		<div>
-			<img src="logo.JPG" width="300" height="128"></img>	
+			<img src={logo} width="300" height="128"></img>	
 		</div>	
 		<div className="menu-home">
 			<div className="menu-nav">
