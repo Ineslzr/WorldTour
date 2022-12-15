@@ -7,35 +7,21 @@ import ShowFormulaire from './ShowFormulaire.js';
 import ChoixQuestion from "./choixQuestion";
 import {useLocation} from 'react-router-dom';
 
-import Acceptation from "./Acceptation.js";
-import ShowFormulaire from './ShowFormulaire.js';
-
-
 function Quiz(){
 
     const [questions,setQuestions] = useState([{}]);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
-	const [choixUser, setChoixUser] = useState([]);
-	const location = useLocation();
 	const [showForm,setShowForm]= useState(false);
+	const location = useLocation();
+
+	//const [country, setCountry] = useState("");
 
 	const handleAnswerOptionClick = (event, isCorrect) => {
-
-		let valueUser = {rep : event.target.innerText, correct : false};
-		let goodResp = questions[currentQuestion].choix.filter(obj => obj.isCorrect);
-		//console.log(goodResp[0].intitule);
-
 		if (isCorrect) {
 			setScore(score + 1);
-			valueUser = {rep : event.target.innerText, correct : true}
-		} 
-
-		valueUser["correction"] = goodResp[0].intitule;
-
-		setChoixUser(current => [...current, valueUser]);
-		console.log(choixUser)
+		}
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
@@ -45,6 +31,13 @@ function Quiz(){
 		}
 	};
 
+	const handleFormMail = () => {
+		if(showForm === false){
+			setShowForm(true);
+		}
+		else setShowForm(false);
+
+	}
 
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
@@ -72,18 +65,16 @@ function Quiz(){
 		marginBottom:"15px"
 	};
 
-
     return(
-		<div style={{display:"flex", flexDirection:"column", marginBottom:"70px"}}>
+		<div style={{display:"flex", flexDirection:"column"}}>
 
 			<div style={barreLateraleQ}>
-				<span>{location.state.nom} {location.state.country}</span>
+				<span>{location.state.country}</span>
 			</div>
 
 			<div className='app'>
 				{showScore ? (
-					<div className='score'><Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} /><button onClick={sendScoreHistorique}>save</button>
-					</div>
+					<Score score={score} nbQuestions={questions.length} />
 				) : (
 					<>
 						<Question 
@@ -103,7 +94,13 @@ function Quiz(){
 					</>
 				)}
 			</div>
-
+			{showScore ? (<div className='form-validation'>
+				{showForm ?(<ShowFormulaire/>):(
+					<Acceptation handleFormMail={handleFormMail} />) }
+				</div>
+		) : 
+		
+		(<></>)}
 		</div>
     )
 }
