@@ -34,5 +34,5 @@ def getQuizScore():
     score= request.form['scoreHistorique']
     type= request.form['typeHistorique']
     Historique.updateHistorique('Lina',score,type,datetime.date.today())
-    return score
+    return jsonify(score)
 

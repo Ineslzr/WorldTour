@@ -68,6 +68,7 @@ function Quiz(){
 	}
 
 
+
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
 		fetch(url).then(
@@ -78,6 +79,9 @@ function Quiz(){
 			}
 		)
 	}, []);
+
+
+
 
 	//CSS
 	const barreLateraleQ = {
@@ -103,8 +107,8 @@ function Quiz(){
 
 			<div className='app'>
 				{showScore ? (
-					<Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} />
-				) : (
+					<div className='score'><Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} /><button onClick={sendScoreHistorique}>save</button>
+                    </div>				) : (
 					<>
 						<Question 
 							currentQuestion={currentQuestion + 1} 
