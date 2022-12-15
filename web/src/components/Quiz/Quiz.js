@@ -97,6 +97,14 @@ function Quiz(){
 		fontWeight:"bold",
 		marginBottom:"15px"
 	};
+	const displayQuiz = {
+		display: "flex",
+		flexDirection: "space-around",
+		width: "420px",
+	};
+	const choices = {
+	};
+	
 
     return(
 		<div style={{display:"flex", flexDirection:"column"}}>
@@ -107,24 +115,26 @@ function Quiz(){
 
 			<div className='app'>
 				{showScore ? (
-					<div className='score'><Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} /><button onClick={sendScoreHistorique}>save</button>
-                    </div>				) : (
-					<>
+					<div className='score'><Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} /><button onClick={sendScoreHistorique}>save</button></div>) 
+					: (
+					<div style={displayQuiz}>
 						<Question 
 							currentQuestion={currentQuestion + 1} 
 							nbQuestions={questions.length} 
 							intitule={questions[currentQuestion].intitule} 
 						/>
-						{ questions[currentQuestion].choix ?
-							<ChoixQuestion 
-								choix={questions[currentQuestion].choix} 
-								currentQuestion={currentQuestion}
-								handleAnswerOptionClick={handleAnswerOptionClick}
-							/> 
+						{questions[currentQuestion].choix ?
+							<div style={choices}>
+								<ChoixQuestion
+									choix={questions[currentQuestion].choix} 
+									currentQuestion={currentQuestion}
+									handleAnswerOptionClick={handleAnswerOptionClick}
+								/> 
+							</div>
 						:
 							<></>
 						}
-					</>
+					</div>
 				)}
 			</div>
 			{showScore ? (<div className='form-validation'>
