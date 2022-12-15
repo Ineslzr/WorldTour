@@ -28,6 +28,7 @@ root.render(
         <Route path="/PropositionQuizByTheme" element={<PropositionQuizByTheme/>}/>
         <Route path="/CreerQuiz" element={<CreerQuiz/>}/>
         <Route path="/ChoixPays/:country" element={<Pays/>}/>
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
