@@ -13,15 +13,24 @@ function Quiz(){
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
+	const [choixUser, setChoixUser] = useState([]);
 	const [showForm,setShowForm]= useState(false);
 	const location = useLocation();
-
-	//const [country, setCountry] = useState("");
-
 	const handleAnswerOptionClick = (event, isCorrect) => {
+
+		let valueUser = {rep : event.target.innerText, correct : false};
+		let goodResp = questions[currentQuestion].choix.filter(obj => obj.isCorrect);
+		//console.log(goodResp[0].intitule);
+
 		if (isCorrect) {
 			setScore(score + 1);
-		}
+			valueUser = {rep : event.target.innerText, correct : true}
+		} 
+
+		valueUser["correction"] = goodResp[0].intitule;
+
+		setChoixUser(current => [...current, valueUser]);
+		console.log(choixUser)
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
@@ -38,6 +47,8 @@ function Quiz(){
 		else setShowForm(false);
 
 	}
+
+
 
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
@@ -74,7 +85,7 @@ function Quiz(){
 
 			<div className='app'>
 				{showScore ? (
-					<Score score={score} nbQuestions={questions.length} />
+					<Score score={score} nbQuestions={questions.length} questions={questions} choixUser={choixUser} g={questions[currentQuestion].choix} />
 				) : (
 					<>
 						<Question 

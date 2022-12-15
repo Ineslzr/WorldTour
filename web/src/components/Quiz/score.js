@@ -33,8 +33,6 @@ function Score(props){
         fontSize: "12px"
     };
 
-   // console.log(props.g);
-
     return(
         <div style={centrage} className='score-section'>
 			<h2>Votre score est de {props.score} sur {props.nbQuestions} !</h2>
@@ -42,7 +40,7 @@ function Score(props){
             <h2>Vous avez remporté {props.score} points</h2>
 
             <> {showResults ? <></> : 
-            <div><button  style={btn} onClick={handleShowResults}>Voir mes réponses</button></div> }
+            <div><button style={btn} onClick={handleShowResults}>Voir mes réponses</button></div>}
 
             {showResults ?
                 <>
