@@ -37,12 +37,6 @@ function Pays(){
 		fontWeight:"bold",
 		marginBottom:"15px"
     };
-    const barreLateraleQFiltres = {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        borderRadius: "7px"
-    };
     const leftSideCountries = {
         width:"60%"
     };
@@ -87,7 +81,7 @@ function Pays(){
                                 
                 <div style={rightSideCountries}>
                     {quiz.map((q) => (
-                        <button style={lesboutons} onClick={()=>goToQuiz(q.id_quiz, q.nom)}>{q.nom}</button>
+                        <button key={q.id} style={lesboutons} onClick={()=>goToQuiz(q.id_quiz, q.nom)}>{q.nom}</button>
                     ))}
                 </div>
 		    </div>

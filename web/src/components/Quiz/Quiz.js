@@ -5,6 +5,10 @@ import Question from "./question.js";
 import ChoixQuestion from "./choixQuestion";
 import {useLocation} from 'react-router-dom';
 
+import Acceptation from "./Acceptation.js";
+import ShowFormulaire from './ShowFormulaire.js';
+
+
 function Quiz(){
 
     const [questions,setQuestions] = useState([{}]);
@@ -13,6 +17,7 @@ function Quiz(){
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [choixUser, setChoixUser] = useState([]);
 	const location = useLocation();
+	const [showForm,setShowForm]= useState(false);
 
 	const handleAnswerOptionClick = (event, isCorrect) => {
 
@@ -122,6 +127,14 @@ const sendScoreHistorique = async (e)=>{
 					</>
 				)}
 			</div>
+
+			{showScore ? (<div className='form-validation'>
+				{showForm ?(<ShowFormulaire/>):(
+					<Acceptation handleFormMail={handleFormMail} />) }
+				</div>
+		) : 
+		
+		(<></>)}
 		</div>
     )
 }
