@@ -115,41 +115,74 @@ Machine learning (utilisation photos déposé par l’utilisateur)
 
 *(Grande) Feature 1 : Créer un quiz*
 
-image::img/maq1_1.png[Logo Oxiane]
+image::img/1-QUIZ/maq1_1.png[Logo Oxiane]
 
-image::img/maq1_2.png[Logo Oxiane]
+image::img/1-QUIZ/maq1_2.png[Logo Oxiane]
 
-image::img/maq1_3.png[Logo Oxiane]
+image::img/1-QUIZ/maq1_3.png[Logo Oxiane]
 
 <<<
 
 *(Grande) Feature 2 : Joindre un fichier (pdf) pour permettre à l'utilisateur de gagner des points*
 
-image::img/maq2_1.png[Logo Oxiane]
+image::img/4-PDF/maq2_1.png[Logo Oxiane]
 
-image::img/maq2_2.png[Logo Oxiane]
+image::img/4-PDF/maq2_2.png[Logo Oxiane]
 
-image::img/maq2_3.png[Logo Oxiane]
+image::img/4-PDF/maq2_3.png[Logo Oxiane]
 
 <<<
 
 *(Petite) Feature 3 : Filtre quiz par pays*
 
-image::img/maq3_1.png[Logo Oxiane]
+image::img/2-QUIZ_PAYS/maq3_1.png[Logo Oxiane]
 
-image::img/maq3_2.png[Logo Oxiane]
+image::img/2-QUIZ_PAYS/maq3_2.png[Logo Oxiane]
 
-image::img/maq3_3.png[Logo Oxiane]
+image::img/2-QUIZ_PAYS/maq3_3.png[Logo Oxiane]
 
 <<<
 
 *(Petite) Feature 4 : Questionnaire d'introduction*
 
-image::img/maq4_1.png[Logo Oxiane]
+image::img/5-QINTRO/maq4_1.png[Logo Oxiane]
 
-image::img/maq4_2.png[Logo Oxiane]
+image::img/5-QINTRO/maq4_2.png[Logo Oxiane]
+
+image::img/5-QINTRO/maq4_3.png[Logo Oxiane]
 
 <<<
+
+
+*(Petite) Feature 5 : Création du quiz*
+
+image::img/7-CREATIONQ/maq8_1.png[Logo Oxiane]
+
+<<<
+
+*(Petite) Feature 6 : Affichage du score*
+
+image::img/6-SCORE/maq7_1.png[Logo Oxiane]
+
+image::img/6-SCORE/maq7_2.png[Logo Oxiane]
+
+image::img/6-SCORE/maq7_3.png[Logo Oxiane]
+
+<<<
+
+*(Grande) Feature 7 : Envoi d'un mail*
+
+image::img/3-MAIL/maq6_1.jpg[Logo Oxiane]
+
+image::img/3-MAIL/maq6_2.jpg[Logo Oxiane]
+
+<<<
+
+*(Petite) Feature 8 : Page d'accueil*
+
+
+<<<
+
 
 * [.underline]#*Diagramme de classes global (partie métier)*#
 
@@ -180,18 +213,24 @@ Donc lorsque nous essayons de lancer le back, tous les __init__.py seront vérif
 
 * [.underline]#*Diagrammes de séquence des interactions front/back (par feature, voir le back comme une boîte noire)*#
 
-Diagramme de séquence feature "Quiz" :
+* [.underline]#*Diagramme de séquence feature "Quiz" :*#
 
 image::diagrams/diag-seq-1.png[Logo Oxiane]
 
 <<<
 
-Diagramme de séquence feature "PDF" :
+* [.underline]#*Diagramme de séquence feature "PDF" :*#
 
 image::diagrams/diag-seq-2.png[Logo Oxiane]
 
 <<<
 
-Diagramme de séquence feature "Création quiz" : 
+* [.underline]#*Diagramme de séquence feature "Création quiz" :*# 
 
 image::diagrams/diag-seq-3.png[Logo Oxiane]
+
+<<<
+
+* [.underline]#*Diagramme de séquence feature "Feature historique" :*# 
+
+image::diagrams/diag-seq-4.png[Logo Oxiane]

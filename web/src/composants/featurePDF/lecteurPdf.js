@@ -8,8 +8,7 @@ function LecteurPdf(props){
     const [pdfKey, setPdfKey] = useState(['']);
     const [pdfCat, setPdfCat] = useState('');
     const [choix,setChoix] = useState(false);
-
-
+   
     const handleFileChange = async (e) =>{
         const file = e.target.files[0];
         console.log(file);
@@ -42,8 +41,7 @@ function LecteurPdf(props){
                 console.log(choix);
             }
             else setChoix(false);
-        }
-            
+        } 
     }
 
     return (
@@ -67,10 +65,9 @@ function LecteurPdf(props){
                  : 
                  <div> <center><span>..... Apres verification du fichier {pdfCat}......</span></center><br></br>
                  <span> Nous avons trouver les mots {pdfKey[0]}, {pdfKey[1]}, {pdfKey[2]}, {pdfKey[3]}</span><br></br><br></br>
-                   <center>Bravo, vous avez gagné {points} points ! </center> </div>
+                   <center>Bravo, vous avez gagné {points} points ! </center> 
+                   </div>
             }
-           
-            
         </div>
     )
 }

@@ -10,6 +10,7 @@ function App(){
 			<Link to="/ChoixPays" relative="path">Choix du pays</Link><br/>
 			<Link to="/Questionnaire" relative="path">Questionnaire</Link><br/>
 			<Link to="/Feature2" relative='path'>Déposer un document pdf</Link><br/>
+			<Link to="/Historique" relative='path'>Visualiser l'historique de vos points</Link><br/>
 		</nav>
 		
 	</>

@@ -1,6 +1,8 @@
+import datetime
 from api import app,mysql
 from api.models import *
-from flask import jsonify,request
+from flask import jsonify, request
+
 
 @app.route("/Quiz/<id_quiz>")
 def CreateQuiz(id_quiz):
@@ -25,4 +27,12 @@ def insertNewQuiz():
 def getQuizByCountry(Country):
     quiz = Quiz.quizByCountry(Country)
     return jsonify(quiz)
+
+
+@app.route("/scoreQuiz",methods=["POST"],strict_slashes=False )
+def getQuizScore():
+    score= request.form['scoreHistorique']
+    type= request.form['typeHistorique']
+    Historique.updateHistorique('Lina',score,type,datetime.date.today())
+    return score
 
