@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import '../../styles/quiz/quiz.css';
 import Score from "./score";
 import Question from "./question.js";
+import Acceptation from "./Acceptation.js";
+import ShowFormulaire from './ShowFormulaire.js';
 import ChoixQuestion from "./choixQuestion";
 import {useLocation} from 'react-router-dom';
 
@@ -41,35 +43,9 @@ function Quiz(){
 		} else {
 			setShowScore(true);
 		}
-	
-		
-};
+	};
 
-	const handleFormMail = () => {
-		if(showForm === false){
-			setShowForm(true);
-		}
-		else setShowForm(false);
 
-	}
-const sendScoreHistorique = async (e)=>{
-	e.preventDefault();
-	if (currentQuestion!= questions.length+1) {
-		const scoreResult = new FormData();
-		scoreResult.append('scoreHistorique',score);
-		scoreResult.append('typeHistorique','quiz')
-		let response = await fetch('/scoreQuiz',
-		{
-			method: 'post',
-			body: scoreResult,
-		}
-		);
-		// console.log(response);
-
-		let res = await response.json();
-		console.log(res);
-}
-}
 	useEffect(() => {
 		let url="/Quiz/"+location.state.id;
 		fetch(url).then(
@@ -128,13 +104,6 @@ const sendScoreHistorique = async (e)=>{
 				)}
 			</div>
 
-			{showScore ? (<div className='form-validation'>
-				{showForm ?(<ShowFormulaire/>):(
-					<Acceptation handleFormMail={handleFormMail} />) }
-				</div>
-		) : 
-		
-		(<></>)}
 		</div>
     )
 }

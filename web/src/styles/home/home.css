@@ -1,0 +1,33 @@
+.menu-home{
+    width: 1000px;
+    background-color: #B1E9A3;
+    text-align: center;
+    padding:50px;
+    border-radius: 10px;
+
+   display: flex;
+   flex-direction: column;
+   line-height: 40px;
+  
+}
+
+
+.menu-nav{
+    display:flex;
+    justify-content: space-between;
+}
+.menu-gauche{
+
+display: flex;
+
+}
+
+.menu-droit{
+  
+    display: flex;
+}
+.font{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: brown;
+}
