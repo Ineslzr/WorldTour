@@ -18,12 +18,23 @@ function Accueil(props){
         setOption(event.target.value);
     }
 
+	function changeLangue(lang){
+		alert(lang)
+		//fire redux event : actions
+		
+	}	
+
     return(
 		<>
 		<div>
 			<img src={logo} width="300" height="128"></img>	
 		</div>	
 		<div className="menu-home">
+			<div className="langue">
+				<div className="langue-vi"><span onClick={() => changeLangue('vi')}>VN</span></div>
+				<div className="langue-fr"><span onClick={() => changeLangue('fr')}>FR</span></div>
+				<div className="langue-en"><span onClick={() => changeLangue('en')}>EN</span></div>	
+			</div>
 			<div className="menu-nav">
 				<div className="menu-gauche">
 					<button>Home</button>
