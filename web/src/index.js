@@ -12,6 +12,7 @@ import PropositionQuizByTheme from './components/Quiz/PropositionQuizByTheme';
 import CreerQuiz from './components/Quiz/creationQuiz/creerQuiz';
 import Pays from '../src/components/FiltrePays/Pays'
 import Historique from './composants/featurePDF/historique';
+import SignUpUser from './components/Users/SignUpUser';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,6 +29,7 @@ root.render(
         <Route path="/PropositionQuizByTheme" element={<PropositionQuizByTheme/>}/>
         <Route path="/CreerQuiz" element={<CreerQuiz/>}/>
         <Route path="/ChoixPays/:country" element={<Pays/>}/>
+        <Route path="/SignUpUser" element={<SignUpUser/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
