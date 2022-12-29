@@ -35,7 +35,7 @@ function LecteurPdf(props){
             setPdfKey(res['key']);
             setPoints(res['score']);
             setPdfCat(res['typefichier']);
-            // console.log(points);
+            console.log(points);
             if(Number.isInteger(res['score'])){
                 setChoix(true);
                 console.log(choix);

@@ -5,3 +5,5 @@ from api.models.choix import *
 from api.models.pdfScore import *
 from api.models.questionnaire import *
 from api.models.historique import *
+from api.models.lirePdf import *
+from api.models.pointsUser import *

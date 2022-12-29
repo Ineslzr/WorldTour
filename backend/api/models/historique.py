@@ -18,3 +18,11 @@ class Historique():
         cur.connection.commit()
         cur.close()
         return 1
+
+    @staticmethod
+    def addPointsToCountry(country,points,idUser):
+        cur = mysql.connection.cursor()
+        cur.execute("UPDATE userspointspays SET "+str(country)+" = "+ str(points)+" WHERE idUser = "+str(idUser))
+        cur.connection.commit()
+        cur.close()
+        return 1

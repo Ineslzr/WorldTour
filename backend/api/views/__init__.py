@@ -6,3 +6,4 @@ from api.views.question import *
 from api.views.choix import *
 from api.views.questionnaire import *
 from api.views.historiqueAffichage import *
+from api.views.pointsUser import *
