@@ -9,7 +9,6 @@ function SignUpUser() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Envoi des données du formulaire au serveur
     fetch('/SignUpUser', {
       method: 'POST',
       headers: {
@@ -19,7 +18,6 @@ function SignUpUser() {
     })
       .then(response => response.json())
       .then(data => {
-        // Mise à jour du message affiché à l'utilisateur
         setMessage(data.message);
         console.log(data)
       });
