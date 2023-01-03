@@ -2,9 +2,14 @@ import React, {useState} from "react";
 import '../../styles/home/home.css';
 import { useNavigate } from 'react-router-dom';
 import logo from './logo1.JPG';
+import { changeLanguageApp } from "../Langue/appAction";
+import { useTranslation, Trans } from 'react-i18next'
+import i18next from 'i18next';
+
 
 
 function Accueil(props){
+	
 
 	const[option, setOption]=useState('');
 	const navigate = useNavigate();
@@ -18,11 +23,11 @@ function Accueil(props){
         setOption(event.target.value);
     }
 
-	function changeLangue(lang){
-		alert(lang)
-		//fire redux event : actions
-		
-	}	
+			
+	const { t, i18n } = useTranslation()
+	function changeLangue(language){
+		i18next.changeLanguage(language)
+	}
 
     return(
 		<>
@@ -37,7 +42,7 @@ function Accueil(props){
 			</div>
 			<div className="menu-nav">
 				<div className="menu-gauche">
-					<button>Home</button>
+					<button>Contact</button>
 					<button>Contact</button>
 					<button>Presentation</button>
 				</div>
@@ -48,7 +53,9 @@ function Accueil(props){
 				</div>
 			</div>	
 			<br></br>
-			<span><label className="font">Welcome to our site World Tour </label></span>
+			<span><label className="font">{t('Welcome')}</label></span>
+
+		
 			<br></br>
 			
 			<select name="route" id="routeChoix"  onChange={goToRoute}>
@@ -69,5 +76,7 @@ function Accueil(props){
 	</>
 	)  
 }
+
+
 
 export default Accueil;
