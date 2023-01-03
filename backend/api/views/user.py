@@ -16,11 +16,12 @@ def signup():
     name = data["name"]
     email = data["email"]
     password = data["password"]
+    role = "user"
 
     # Créez un nouvel utilisateur en utilisant les données du formulaire
-    new_user = User(name, email, password)
+    new_user = User(name, email, password, role)
 
     # Enregistrez l'utilisateur dans la base de données
-    User.addUser(name, email, password)
+    User.addUser(name, email, password, role)
 
     return jsonify({"message": "Utilisateur créé avec succès"})
