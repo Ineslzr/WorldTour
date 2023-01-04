@@ -21,6 +21,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import * as serviceWorker from './serviceWorker';
 import './i18n';
 
+import SignUpUser from './components/Users/SignUpUser';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -40,6 +41,7 @@ root.render(
         <Route path="/CreerQuiz" element={<CreerQuiz/>}/>
         <Route path="/ChoixPays/:country" element={<Pays/>}/>
         <Route path="/UsersPointsInMap" element={<Map/>}/>
+        <Route path="/SignUpUser" element={<SignUpUser/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

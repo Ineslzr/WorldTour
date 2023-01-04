@@ -6,6 +6,7 @@ import { changeLanguageApp } from "../Langue/appAction";
 import { useTranslation, Trans } from 'react-i18next'
 import i18next from 'i18next';
 
+import { Link } from 'react-router-dom';
 
 
 function Accueil(props){
@@ -49,7 +50,9 @@ function Accueil(props){
 
 				<div className="menu-droit">	
 					<button>{t('Connexion.connect')}</button> 
+					<Link to="/SignUpUser">
 					<button>{t('Inscription.inscription')}</button>
+					</Link>
 				</div>
 			</div>	
 			<br></br>
