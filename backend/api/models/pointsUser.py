@@ -3,7 +3,7 @@ import json
 
 class PointsUser():
 
-    def __init__():
+    def __init__(self):
         return 
 
     @staticmethod

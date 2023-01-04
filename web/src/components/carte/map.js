@@ -5,8 +5,9 @@ import MapChart from "./MapChart";
 
 export default function Map(props) {
   return (
-    <div>
-      <h1>Vos points par pays</h1>
+    <div className="carteFeature">
+      <div className="titleCarte">
+      <center><h1>Vos points par pays</h1></center></div>
       <div className="carte">
       <MapChart />
       </div>
