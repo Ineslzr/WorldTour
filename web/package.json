@@ -10,7 +10,7 @@
     "bootstrap": "^5.2.3",
     "d3-fetch": "^3.0.1",
     "d3-scale": "^4.0.2",
-    "i18next": "^22.4.6",
+    "i18next": "^22.4.8",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.1",
     "i18next-xhr-backend": "^3.2.2",

@@ -70,7 +70,8 @@ i18n
               "questionnaire": "Questionnaire",
               "Depose_document": "Submit a pdf document",
               "historique": "Historical",
-              "creation_quiz": "Create a quiz"
+              "creation_quiz": "Create a quiz",
+              "carte_points": "Map with user points"
           },
             "Choix_pays":{
               "choix_pays":"Choose a country",
@@ -106,7 +107,8 @@ i18n
           "questionnaire": "Questionnaire",
           "Depose_document": "Déposer un document pdf",
           "historique": "Historique",
-          "creation_quiz": "Créer un quiz"
+          "creation_quiz": "Créer un quiz",
+          "carte_points": "Carte points utilisateur"
         },
         "Choix_pays":{
           "choix_pays":"Choisissez un pays",
@@ -142,7 +144,8 @@ i18n
             "questionnaire": "Câu hỏi",
             "Depose_document": "Tải lên 1 file pdf",
             "historique": "Lịch sử truy cập",
-            "creation_quiz": "Tạo 1 câu hỏi"
+            "creation_quiz": "Tạo 1 câu hỏi",
+            "carte_points": "Bản đồ với điểm người dùng"
           },
           "Choix_pays":{
             "choix_pays":"Chọn 1 đất nước",
