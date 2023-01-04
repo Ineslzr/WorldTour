@@ -2,12 +2,17 @@ import React, {useState, useEffect} from 'react';
 import '../../styles/quiz/quiz.css';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import { useTranslation, Trans } from 'react-i18next'
+import i18next from 'i18next';
+
 
 function Pays(){
 
     const [quiz, setQuiz] = useState([]);
     let navigate = useNavigate();
     let { country } = useParams();
+
+    const { t, i18n } = useTranslation()
 
     const goToQuiz = (id_country, country_quiz) => {
         navigate("/Quiz", {state:{id: id_country, country:country_quiz}});
@@ -75,7 +80,7 @@ function Pays(){
             <div className='app' style={base}>
                 <div style={leftSideCountries}>
                     <div style={carreInformatif}>
-                        <p>Choisissez un quiz pour gagner un badge !</p>
+                        <p>{t('Choix_quiz.badge')}</p>
                     </div>
                 </div>
                                 
