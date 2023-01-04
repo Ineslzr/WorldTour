@@ -1,8 +1,4 @@
 body {
-  margin: 270px auto;
-  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;;  
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   background-color: #c7eeff;
 }

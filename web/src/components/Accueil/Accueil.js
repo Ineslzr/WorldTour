@@ -50,7 +50,7 @@ function Accueil(props){
 				<option value= "/Feature2">Déposer un document pdf</option> 
 				<option value= "/Historique">Historique</option> 
 				<option value= "/CreerQuiz">Créer un quiz</option> 
-
+				<option value= "/UsersPointsInMap">Vos points par pays!</option> 
         	</select>
 			
 		</div>

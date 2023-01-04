@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,7 +12,7 @@ import PropositionQuizByTheme from './components/Quiz/PropositionQuizByTheme';
 import CreerQuiz from './components/Quiz/creationQuiz/creerQuiz';
 import Pays from '../src/components/FiltrePays/Pays'
 import Historique from './composants/featurePDF/historique';
-
+import Map from './components/carte/map';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +28,7 @@ root.render(
         <Route path="/PropositionQuizByTheme" element={<PropositionQuizByTheme/>}/>
         <Route path="/CreerQuiz" element={<CreerQuiz/>}/>
         <Route path="/ChoixPays/:country" element={<Pays/>}/>
+        <Route path="/UsersPointsInMap" element={<Map/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
