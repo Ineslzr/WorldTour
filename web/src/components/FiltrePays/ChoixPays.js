@@ -3,6 +3,10 @@ import '../../styles/quiz/quiz.css';
 import CaseNClickable from '../Cases/CaseNClickable'
 import { useNavigate } from 'react-router-dom';
 
+import { useTranslation, Trans } from 'react-i18next'
+import i18next from 'i18next';
+
+
 function ChoixPays(){
 
     const continents = ["EUROPE"];
@@ -14,6 +18,7 @@ function ChoixPays(){
         navigation("/ChoixPays/" + country_quiz , {state:{id: id_country, country:country_quiz}});
         console.log(id_country)
     } 
+    const { t, i18n } = useTranslation()
 
     //CSS    
     const barreLateraleQ = {
@@ -67,8 +72,8 @@ function ChoixPays(){
     return(
         <div style={{display:"flex", flexDirection:"column"}}>
 			<div style={{...barreLateraleQ, ...barreLateraleQFiltres}}>
-				<span> Choisissez un pays </span>
-				<div> Filtre 
+				<span> {t('Choix_pays.choix_pays')} </span>
+				<div> {t('Choix_pays.filtre')}
                     <input style={{marginLeft:"8px"}} name="filtre" type="search" value={typeFilter} onChange={e => setTypeFilter(e.target.value)} />
                 </div>  
 			</div>
@@ -78,7 +83,8 @@ function ChoixPays(){
                     <CaseNClickable intitule={continents[0]}/>
                     
                     <div style={carreInformatif}>
-                        Testez vos connaissances à l'aide de quiz sur le pays choisi !
+                    {t('Choix_pays.Testez_connaissance')}
+                        
                     </div>
                 </div>
 
