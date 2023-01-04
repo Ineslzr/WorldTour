@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import '../../styles/home/home.css';
 import { useNavigate } from 'react-router-dom';
 import logo from './logo1.JPG';
+import { Link } from 'react-router-dom';
 
 
 function Accueil(props){
@@ -33,7 +34,10 @@ function Accueil(props){
 
 				<div className="menu-droit">	
 					<button>Se connecter</button> 
-					<button>S'inscrire</button>
+					<Link to="/SignUpUser">
+						<button>S'inscrire</button>
+					</Link>
+
 				</div>
 			</div>	
 			<br></br>
