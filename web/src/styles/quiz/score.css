@@ -1,6 +1,0 @@
-.score-section {
-    display:grid;
-     grid-template-rows: 80% 20%;
-    font-size: 24px;
-    align-items: center;
-}

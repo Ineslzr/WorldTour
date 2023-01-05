@@ -1,9 +1,0 @@
-[plantuml, target=diag-seq-4, format=png]
-....
-User -> Quiz : POST/ getQuizScore()
-User -> PDF : POST/ getPDFScore()
-Quiz -> Historique : POST/ getQuizScore()
-PDF -> Historique : POST/ getPDFScore()
-User -> Historique : POST/ getNuplet
-User <-- Historique : reponse (affichageScore)
-....
