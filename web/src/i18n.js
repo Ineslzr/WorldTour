@@ -50,23 +50,109 @@ i18n
       en: {
           translation: {
             "Welcome": {
-              1 : "Welcome to our site",
-          }
-          }
+              "welcome" : "Welcome to our site",
+          },
+            "Connexion": {
+             "connect" : "Connexion",
+          },
+            "Inscription":{
+              "inscription": "Inscription",
+          },
+            "Gauche": {
+              "Home" : "Home",
+              "Contact" : "Contact",
+              "Presentation" : "Presentation"
+          },
+            "Menu":{
+              "choix" : "Your choices",
+              "choix_quiz_theme":"Choose a quiz according to your favorite themes",
+              "choix_pays" :"Choose a country",
+              "questionnaire": "Questionnaire",
+              "Depose_document": "Submit a pdf document",
+              "historique": "Historical",
+              "creation_quiz": "Create a quiz"
+          },
+            "Choix_pays":{
+              "choix_pays":"Choose a country",
+              "Testez_connaissance": "Test your knowledge with quizzes on the chosen country!",
+              "filtre" : "Filter"
+          },
+            "Choix_quiz":{
+              "badge" : "Choose a quiz to earn a badge!",
+              "theme": "Your Subject is",
+            }
+        }
       },
       fr: {
         translation: {
           "Welcome": {
-            "1" : "Bienvenue",
-            
-        }
-        }
+            "welcome" : "Bienvenue à notre site",    
+        },
+          "Connexion": {
+            "connect" : "Se connecter",
+        },
+          "Inscription":{
+            "inscription": "S'inscrire",
+        },
+        "Gauche": {
+          "Home" : "Accueil",
+          "Contact" : "Contactez-nous",
+          "Presentation" : "Presentation"
+        },
+        "Menu":{
+          "choix" : "Choisir une thème ",
+          "choix_quiz_theme":"Choisissez un quiz selon vos thèmes préférés !",
+          "choix_pays" :"Choix du pays",
+          "questionnaire": "Questionnaire",
+          "Depose_document": "Déposer un document pdf",
+          "historique": "Historique",
+          "creation_quiz": "Créer un quiz"
+        },
+        "Choix_pays":{
+          "choix_pays":"Choisissez un pays",
+          "Testez_connaissance": "Testez vos connaissances à l'aide de quiz sur le pays choisi !",
+          "filtre" : "Filtrer"
+        },
+        "Choix_quiz":{
+          "badge" : "Choisissez un quiz pour gagner un badge !",
+          "theme": "Le thème est  :"
+        },
+       }
       },
       vn: {
         translation: {
           "Welcome": {
-            "1" : "chao mung"
-        }
+            "welcome" : "Chào mừng đến với trang web du lịch",
+          },
+          "Connexion": {
+            "connect" : "Đăng nhập",
+          },
+          "Inscription":{
+            "inscription": "Đăng ký",
+          },
+          "Gauche": {
+            "Home" : "Trang chủ",
+            "Contact" : "Liên hệ ",
+            "Presentation" : "Giới thiệu"
+          },
+          "Menu":{
+            "choix" : "Chọn 1 chủ đề ! ",
+            "choix_quiz_theme":"Chọn câu hỏi theo chủ đề yêu thích !",
+            "choix_pays" :"Chọn 1 đất nước",
+            "questionnaire": "Câu hỏi",
+            "Depose_document": "Tải lên 1 file pdf",
+            "historique": "Lịch sử truy cập",
+            "creation_quiz": "Tạo 1 câu hỏi"
+          },
+          "Choix_pays":{
+            "choix_pays":"Chọn 1 đất nước",
+            "Testez_connaissance": "Kiểm tra kiến ​​​​thức của bạn với các câu đố về quốc gia đã chọn !",
+            "filtre" : "Bộ lọc"
+          },
+          "Choix_quiz":{
+            "badge" : "Chọn một bài kiểm tra để kiếm huy hiệu !",
+            "theme": "Chủ đề :",
+          },
         }
       }
   },
