@@ -38,7 +38,7 @@ function SignUpUser() {
 
 
   return (
-    <div className='app'>
+    <div className='app signup'>
     <span style={{textAlign:"center", marginBottom:"20px"}}><h2>Inscription</h2></span>
     
     <form onSubmit={handleSubmit}>
