@@ -1,4 +1,9 @@
 body {
   font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   background-color: #c7eeff;
+  /*Pour centrer le contenu de la page*/
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
 }
