@@ -1,9 +1,60 @@
 <!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titleWebSite">WorldTour</h1>
+        <h2 class="title">Qu'est-ce que WorldTour ?</h2>
+            <p class="whatIsWT">
+                Avec internet et notamment les réseaux sociaux, nous sommes constamment exposés à des photos
+                de paysage, de vacances ou de personnalités publiques qui montrent leur quotidien aux quatre
+                coins du monde.<br/><br/>
+                C’est dans cet environnement que nous vivons, ce qui peut donner à un très grand nombre cette
+                envie de voyager et de découvrir de nouvelles cultures. Malheureusement, nous sommes dans un
+                contexte où voyager est devenu excessivement cher et n’est pas du tout à la portée de tous. C’est
+                pourquoi nous nous sommes dit que si les gens ne pouvaient pas aller découvrir le monde, alors
+                nous ramènerions le monde à eux.<br/><br/>
+            </p>
+
+        <h2 class="title">Nos fonctionnalités</h2>
+      <div class="card-column column-0">
+            <div class="card card-color-0">            
+                <div class="border"></div>
+                <img src="./img/map_feature.png" />
+                <h1>Observer par pays vos points gagnés</h1>
+            </div>
+        <div class="card card-color-2">
+          <div class="border"></div>
+          <img src="./img/historique_points.png" />
+          <h1>Pour chaque utilisateur, un récapitulatif par catégorie de ses points</h1>
+        </div>
+      </div>
+      <div class="card-column column-1">
+        <div class="card card-color-1">
+          <div class="border"></div>
+          <img src="./img/pdf_feature.png" />
+          <h1>Partagez vos expériences et gagnez des points</h1>
+        </div>
+        <div class="card card-color-3">
+          <div class="border"></div>
+          <img src="./img/quiz_feature.png" />
+          <h1>Répondez à des quizs</h1>
+        </div>
+      </div>
+    </div>
+    
+    <div id="cover" class="cover"></div>
+    
+    <div id="open-content" class="open-content">
+      <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
+      <img id="open-content-image" src="" />
+      <div class="text" id="open-content-text">
+      </div>
+    </div>
+</body>
 </html>
